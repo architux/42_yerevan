@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cat /etc/passwd | \
 grep -Ev "^#|^$" | \
 sed -n 'n;p' | \

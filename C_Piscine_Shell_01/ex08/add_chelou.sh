@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 OUTPUT_BASE="gtaio luSnemf"
 
 FT_NBR1_DECIMAL="$(
