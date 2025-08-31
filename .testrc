@@ -1,0 +1,21 @@
+function test42c() {
+	SOURCE_FILES=("$@")
+
+	if [ ${#SOURCE_FILES[@]} -eq 0 ]; then
+		SOURCE_FILES[0]="*.c"
+	fi
+
+	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o test.out"
+	eval "${comp_command}"
+
+	if [ $? -eq 0 ]; then
+		# Compilation output
+		echo "${SOURCE_FILES[@]} > test.out"
+
+		# Horizontal line between compilation output and test output
+		printf '%.s─' $(seq 1 $(tput cols))
+
+		# Test output
+		./test.out
+	fi
+}
