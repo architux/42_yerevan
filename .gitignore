@@ -1,4 +1,7 @@
 .vscode/*
+
+.tests/*.c
+.tests/*.out
+
 #C_Piscine_C_*/ex*/main.c
 C_Piscine_C_*/ex*/*.out
-
