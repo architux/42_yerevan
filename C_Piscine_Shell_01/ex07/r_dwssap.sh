@@ -1,11 +1,11 @@
 #!/bin/sh
 cat /etc/passwd | \
 sed '/^#/d' | \
-awk 'NR%2==0'| \
-awk -F ":" '{print$1}' | \
-rev | \
+tail -n +2 | \
+cut -d: -f1 | \
+xargs -I {} sh -c 'echo {} | rev' | \
 sort -r | \
-sed -n "$FT_LINE1"','"$FT_LINE2"'p' | \
-awk '{print}' ORS=', ' | \
-sed 's/..$/\./' | \
-xargs echo -n
+sed -n "${FT_LINE1},${FT_LINE2}p" | \
+paste -s -d ';' | sed 's/;/, /g' | \
+sed 's/$/./'
+
