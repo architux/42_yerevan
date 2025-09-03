@@ -1,5 +1,3 @@
-.gitignore
-
 ex01/*
 !ex01/print_groups.sh
 
