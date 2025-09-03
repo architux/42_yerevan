@@ -6,13 +6,11 @@
 /*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 21:53:40 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/08/29 17:11:22 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/04 01:24:31 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_putchar(char c);
 
 void	ft_putchar(char c)
 {

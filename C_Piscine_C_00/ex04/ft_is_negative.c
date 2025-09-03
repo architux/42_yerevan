@@ -6,13 +6,11 @@
 /*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 16:37:00 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/08/31 18:07:52 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/04 01:24:48 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_is_negative(int n);
 
 void	ft_is_negative(int n)
 {

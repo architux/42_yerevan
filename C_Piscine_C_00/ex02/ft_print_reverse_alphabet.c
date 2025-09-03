@@ -6,13 +6,11 @@
 /*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 22:29:15 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/08/29 17:11:47 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/04 01:25:54 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_print_reverse_alphabet(void);
 
 void	ft_print_reverse_alphabet(void)
 {

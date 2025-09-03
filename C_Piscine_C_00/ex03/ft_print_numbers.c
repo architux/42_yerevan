@@ -6,13 +6,11 @@
 /*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 16:12:48 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/08/31 16:18:53 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/04 01:25:47 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_print_numbers(void);
 
 void	ft_print_numbers(void)
 {
