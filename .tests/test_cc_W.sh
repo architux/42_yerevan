@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 arg_1="-Wall"
 arg_2="-Wextra"
@@ -42,3 +42,4 @@ printf "\n"
 for out_checksum in "${!out_checksums[@]}"; do
 	echo "checksum: ${out_checksum}, count: ${out_checksums[${out_checksum}]}"
 done
+
