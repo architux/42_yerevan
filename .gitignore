@@ -6,6 +6,4 @@
 #C_Piscine_C_*/ex*/main.c
 C_Piscine_C_*/ex*/*.out
 
-!C_Piscine_C_*/en.subject.pdf
-!C_Piscine_Shell_*/en.subject.pdf
-
+!C_Piscine_*/en.subject.pdf
