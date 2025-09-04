@@ -1,3 +1,76 @@
+# Run norminette with proper block-based ordering and output colorization
+function norm_older() {
+	norminette -R CheckForbiddenSourceHeader | gawk '
+	BEGIN {
+		GREEN = "\033[32m"
+		RED = "\033[31m"
+		BOLD_RED = "\033[1;31m"
+		RESET = "\033[0m"
+	}
+	/: OK!$/ {
+		if (header != "") {
+			blocks[header] = block;
+		}
+		header = $0;
+		block = GREEN $0 RESET "\n";
+		next;
+	}
+	/: Error!$/ {
+		if (header != "") {
+			blocks[header] = block;
+		}
+		header = $0;
+		block = RED $0 RESET "\n";
+		next;
+	}
+	/^Error: / {
+		block = block BOLD_RED $0 RESET "\n";
+		next;
+	}
+	END {
+		if (header != "") {
+			blocks[header] = block;
+		}
+		PROCINFO["sorted_in"] = "@ind_str_asc";
+		for (h in blocks) {
+			printf "%s", blocks[h];
+		}
+	}
+'
+}
+
+# Run norminette with output colorization
+function norm() {
+	norminette -R CheckForbiddenSourceHeader | awk '
+	BEGIN {
+		GREEN = "\033[32m"
+		RED = "\033[31m"
+		BOLD_RED = "\033[1;31m"
+		RESET = "\033[0m"
+	}
+	/^Setting locale to/ {
+		next;
+	}
+	/: OK!$/ {
+		print GREEN $0 RESET;
+		next;
+	}
+	/: Error!$/ {
+		print BOLD_RED $0 RESET;
+		next;
+	}
+	match($0, /^Error: [A-Z_]+/) {
+		printf "%s", substr($0, 1, RSTART - 1);
+		printf "%s%s%s", RED, substr($0, RSTART, RLENGTH), RESET;
+		printf "%s\n", substr($0, RSTART + RLENGTH);
+		next;
+	}
+	{
+		print $0
+	}
+'
+}
+
 # Batch running of norminette checking, compilation and execution of file just being compiled
 function test42c() {
 	# Norminette output
