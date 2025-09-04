@@ -1,21 +1,29 @@
+# Batch running of norminette checking, compilation and execution of file just being compiled
 function test42c() {
+	# Norminette output
+	norminette -R CheckForbiddenSourceHeader
+
+	# Horizontal line
+	printf '%.s─' $(seq 1 $(tput cols))
+
+	# Compilation...
 	SOURCE_FILES=("$@")
 
 	if [ ${#SOURCE_FILES[@]} -eq 0 ]; then
-		SOURCE_FILES[0]="*.c"
+		readarray -d '' SOURCE_FILES < <(find . -name "*.c" -printf "%P " | sed 's/ $//')
 	fi
 
-	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o test.out"
+	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o a.out"
 	eval "${comp_command}"
 
 	if [ $? -eq 0 ]; then
 		# Compilation output
-		echo "${SOURCE_FILES[@]} > test.out"
+		echo "${SOURCE_FILES[@]} > a.out"
 
-		# Horizontal line between compilation output and test output
+		# Horizontal line
 		printf '%.s─' $(seq 1 $(tput cols))
 
 		# Test output
-		./test.out
+		./a.out
 	fi
 }
