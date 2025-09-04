@@ -3,26 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etamrazy <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 20:21:22 by etamrazy          #+#    #+#             */
-/*   Updated: 2025/08/31 15:29:40 by etamrazy         ###   ########.fr       */
+/*   Updated: 2025/09/04 17:09:15 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c);
 
 void	print_rect_symbol(int height, int width, int max_h, int max_w)
 {
-	if (height == 0)
-	{
-		if (width == 0 || width == max_w)
-			ft_putchar('o');
-		else
-			ft_putchar('-');
-	}
-	else if (height == max_h)
+	if (height == 0 || height == max_h)
 	{
 		if (width == 0 || width == max_w)
 			ft_putchar('o');

@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etamrazy <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 13:16:04 by etamrazy          #+#    #+#             */
-/*   Updated: 2025/08/30 17:58:21 by etamrazy         ###   ########.fr       */
+/*   Updated: 2025/09/04 17:09:10 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 void	rush(int x, int y);
 
 void	ft_putchar(char c);
 
 int	main(void)
 {
+	rush(0, -3);
+	ft_putchar('\n');
 	rush(5, 3);
 	ft_putchar('\n');
 	rush(5, 1);

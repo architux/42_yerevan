@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etamrazy <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 20:22:46 by etamrazy          #+#    #+#             */
-/*   Updated: 2025/08/30 20:22:49 by etamrazy         ###   ########.fr       */
+/*   Updated: 2025/09/04 17:09:22 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c);
