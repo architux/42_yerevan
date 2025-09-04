@@ -6,20 +6,29 @@
 /*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 16:12:48 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/04 01:25:47 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/04 02:40:18 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_print_numbers(void)
 {
-	char	c;
+	char	from_symbol;
+	char	to_symbol;
+	char	cur_symbol;
 
-	c = '0';
-	while (c <= '9')
+	from_symbol = '0';
+	to_symbol = '9';
+	cur_symbol = from_symbol;
+	while (cur_symbol <= to_symbol)
 	{
-		write(1, &c, 1);
-		c++;
+		ft_putchar(cur_symbol);
+		cur_symbol++;
 	}
 }
