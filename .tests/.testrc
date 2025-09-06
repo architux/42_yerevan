@@ -91,6 +91,8 @@ function norm() {
 
 # Batch running of norminette checking, compilation and execution of file just being compiled
 function test42c() {
+	shell_name="$(basename $(readlink /proc/$$/exe))"
+
 	# Norminette output
 	norminette -R CheckForbiddenSourceHeader
 
@@ -101,7 +103,11 @@ function test42c() {
 	SOURCE_FILES=("$@")
 
 	if [ ${#SOURCE_FILES[@]} -eq 0 ]; then
-		readarray -d '' SOURCE_FILES < <(find . -name "*.c" -printf "%P " | sed 's/ $//')
+		case $shell_name in
+			"bash")
+				readarray -d '' SOURCE_FILES < <(find . -name "*.c" -printf "%P " | sed 's/ $//') ;;
+			"zsh")
+				SOURCE_FILES=( $(find . -name "*.c" -printf "%P " | sed 's/ $//') )
 	fi
 
 	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o a.out"
