@@ -1,3 +1,9 @@
+alias cc42="cc -Wall -Wextra -Werror"
+
+function ebash() {
+	bash $1 | cat -e
+}
+
 # Run norminette with proper block-based ordering and output colorization
 function norm_older() {
 	norminette -R CheckForbiddenSourceHeader | gawk '
