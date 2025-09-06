@@ -15,7 +15,8 @@ for a1 in "$arg_1" "$arg_2" "$arg_3"; do
 
 				out_filename="${a1/-}_${a2/-}_${a3/-}.out"
 
-				cc $a1 $a2 $a3 *.c -o "${out_filename}"
+				cc_output=$(cc $a1 $a2 $a3 *.c -o "${out_filename}" 2>&1)
+				echo "  ${cc_output}"
 
 				out_checksum=$(md5sum "${out_filename}" | awk '{print $1}')
 
@@ -42,4 +43,3 @@ printf "\n"
 for out_checksum in "${!out_checksums[@]}"; do
 	echo "checksum: ${out_checksum}, count: ${out_checksums[${out_checksum}]}"
 done
-
