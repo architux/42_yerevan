@@ -9,6 +9,7 @@ function norm_older() {
 	norminette -R CheckForbiddenSourceHeader | gawk '
 	BEGIN {
 		GREEN = "\033[32m"
+		YELLOW="\033[33m"
 		RED = "\033[31m"
 		BRIGHT_RED = "\033[1;31m"
 		RESET = "\033[0m"
@@ -27,6 +28,10 @@ function norm_older() {
 		}
 		header = $0;
 		block = RED $0 RESET "\n";
+		next;
+	}
+	/^Notice: / {
+		block = block YELLOW $0 RESET "\n";
 		next;
 	}
 	/^Error: / {
@@ -50,6 +55,7 @@ function norm() {
 	norminette -R CheckForbiddenSourceHeader | awk '
 	BEGIN {
 		GREEN = "\033[32m"
+		YELLOW="\033[33m"
 		RED = "\033[31m"
 		BRIGHT_RED = "\033[1;31m"
 		RESET = "\033[0m"
@@ -63,6 +69,12 @@ function norm() {
 	}
 	/: Error!$/ {
 		print BRIGHT_RED $0 RESET;
+		next;
+	}
+	match($0, /^Notice: [A-Z_]+/) {
+		printf "%s", substr($0, 1, RSTART - 1);
+		printf "%s%s%s", YELLOW, substr($0, RSTART, RLENGTH), RESET;
+		printf "%s\n", substr($0, RSTART + RLENGTH);
 		next;
 	}
 	match($0, /^Error: [A-Z_]+/) {
