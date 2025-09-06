@@ -111,6 +111,7 @@ function test42c() {
 				readarray -d '' SOURCE_FILES < <(find . -name "*.c" -printf "%P " | sed 's/ $//') ;;
 			"zsh")
 				SOURCE_FILES=( $(find . -name "*.c" -printf "%P " | sed 's/ $//') )
+		esac
 	fi
 
 	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o a.out"
