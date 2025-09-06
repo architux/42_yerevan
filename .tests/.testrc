@@ -115,8 +115,9 @@ function test42c() {
 
 	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o a.out"
 	eval "${comp_command}"
+	comp_exit_code=$?
 
-	if [ $? -eq 0 ]; then
+	if [ ${comp_exit_code} -eq 0 ]; then
 		# Compilation output
 		echo -e "${BRIGHT_YELLOW}${SOURCE_FILES[@]} > a.out${RESET}"
 
@@ -126,4 +127,6 @@ function test42c() {
 		# Test output
 		./a.out
 	fi
+
+	return ${comp_exit_code};
 }
