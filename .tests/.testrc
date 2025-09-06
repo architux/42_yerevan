@@ -4,7 +4,7 @@ function norm_older() {
 	BEGIN {
 		GREEN = "\033[32m"
 		RED = "\033[31m"
-		BOLD_RED = "\033[1;31m"
+		BRIGHT_RED = "\033[1;31m"
 		RESET = "\033[0m"
 	}
 	/: OK!$/ {
@@ -24,7 +24,7 @@ function norm_older() {
 		next;
 	}
 	/^Error: / {
-		block = block BOLD_RED $0 RESET "\n";
+		block = block BRIGHT_RED $0 RESET "\n";
 		next;
 	}
 	END {
@@ -45,7 +45,7 @@ function norm() {
 	BEGIN {
 		GREEN = "\033[32m"
 		RED = "\033[31m"
-		BOLD_RED = "\033[1;31m"
+		BRIGHT_RED = "\033[1;31m"
 		RESET = "\033[0m"
 	}
 	/^Setting locale to/ {
@@ -56,7 +56,7 @@ function norm() {
 		next;
 	}
 	/: Error!$/ {
-		print BOLD_RED $0 RESET;
+		print BRIGHT_RED $0 RESET;
 		next;
 	}
 	match($0, /^Error: [A-Z_]+/) {
