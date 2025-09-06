@@ -96,8 +96,8 @@ function test42c() {
 	YELLOW="\033[33m"
 	RESET="\033[0m"
 
-	# Norminette output
-	norminette -R CheckForbiddenSourceHeader
+	# Colorized norminette output
+	norm
 
 	# Horizontal line
 	printf '%.s─' $(seq 1 $(tput cols))
@@ -114,7 +114,7 @@ function test42c() {
 		esac
 	fi
 
-	comp_command="cc -Wall -Wextra -Werror "${SOURCE_FILES[@]}" -o a.out"
+	comp_command="cc42 "${SOURCE_FILES[@]}" -o a.out"
 	eval "${comp_command}"
 	comp_exit_code=$?
 
