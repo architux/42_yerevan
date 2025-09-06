@@ -93,6 +93,9 @@ function norm() {
 function test42c() {
 	shell_name="$(basename $(readlink /proc/$$/exe))"
 
+	YELLOW="\033[33m"
+	RESET="\033[0m"
+
 	# Norminette output
 	norminette -R CheckForbiddenSourceHeader
 
@@ -115,7 +118,7 @@ function test42c() {
 
 	if [ $? -eq 0 ]; then
 		# Compilation output
-		echo "${SOURCE_FILES[@]} > a.out"
+		echo -e "${BRIGHT_YELLOW}${SOURCE_FILES[@]} > a.out${RESET}"
 
 		# Horizontal line
 		printf '%.s─' $(seq 1 $(tput cols))
