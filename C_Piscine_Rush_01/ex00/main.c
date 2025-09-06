@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
+/*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 14:41:05 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/06 19:17:23 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/06 22:17:14 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -51,20 +52,24 @@ void	write_int(int x)
 	}
 }
 
+void	parse_input(const char *input, int *arr);
+
 int	*gen_values(int values_len);
 
 void	gen_heap_perms(int *values, int size, int *perms, int *perm_idx);
 
 int	main(void)
 {
+	char	*input;
 	int	values_len;
 	int	*values;
+	int	*clues;
 	int	perms_len;
 	int	*perms;
-	int	perm_idx;
 	int	i;
 	int	j;
 
+	// Values
 	values_len = 4;
 	values = gen_values(values_len);
 	if (!values)
@@ -72,14 +77,30 @@ int	main(void)
 		write(2, "Memory allocation failed\n", 25);
 		return (1);
 	}
+	// Clues
+	input = "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
+	clues = (int *)malloc(values_len * values_len * sizeof(int));
+	parse_input(input, clues);
+	i = 0;
+	write(1, "Clues: ", 8);
+	fflush(stdout);
+	while (i < values_len * values_len)
+	{
+		printf("%i ", clues[i]);
+		i++;
+	}
+	printf("\n");
+	// Perms
 	perms_len = factorial(values_len);
 	perms = (int *)malloc(perms_len * values_len * sizeof(int) + sizeof(int));
 	perms = perms + 1;
 	perms[-1] = values_len;
-	perm_idx = 0;
-	gen_heap_perms(values, values_len, perms, &perm_idx);
 	i = 0;
-	while (i < perm_idx)
+	gen_heap_perms(values, values_len, perms, &i);
+	i = 0;
+	write(1, "Perms: \n", 8);
+	fflush(stdout);
+	while (i < perms_len - 1)
 	{
 		write(1, "perm #", 6);
 		write_int(i);
@@ -96,5 +117,6 @@ int	main(void)
 	}
 	free(perms - 1);
 	free(values);
+	free(clues);
 	return (0);
 }
