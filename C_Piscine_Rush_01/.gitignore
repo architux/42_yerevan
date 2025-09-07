@@ -1,0 +1,6 @@
+!ex00/*.c
+!*_basic/*.c
+!*_distributed/*.c
+
+rush01
+test*/*

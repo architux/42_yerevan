@@ -1,9 +1,8 @@
 .vscode/*
 
-.tests/*.c
-.tests/*.out
+*.o
+*.out
 
-C_Piscine_C_*/ex*/*.out
-C_Piscine_Rush_*/ex*/*.out
+.tests/*.c
 
 !C_Piscine_*/en.subject.pdf
