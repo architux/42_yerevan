@@ -120,7 +120,7 @@ function test42c() {
 
 	if [ ${comp_exit_code} -eq 0 ]; then
 		# Compilation output
-		echo -e "${BRIGHT_YELLOW}${SOURCE_FILES[@]} > a.out${RESET}"
+		echo -e "${YELLOW}${SOURCE_FILES[@]} > a.out${RESET}"
 
 		# Horizontal line
 		printf '%.s─' $(seq 1 $(tput cols))
