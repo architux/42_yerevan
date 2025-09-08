@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/07 14:01:41 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/07 14:07:52 by mvasilev         ###   ########.fr       */
+/*   Created: 2025/09/08 05:21:11 by mvasilev          #+#    #+#             */
+/*   Updated: 2025/09/08 06:16:49 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "skyscrapers.h"
+#include <unistd.h>
+#include "io.h"
 
 int	str_len(char *s)
 {
@@ -18,18 +19,8 @@ int	str_len(char *s)
 
 	i = 0;
 	while (s && s[i])
-	{
 		i++;
-	}
 	return (i);
-}
-
-void	write_char(char c)
-{
-	int	r;
-
-	r = write(1, &c, 1);
-	(void)r;
 }
 
 void	write_str(char *s)
@@ -38,16 +29,24 @@ void	write_str(char *s)
 
 	len = str_len(s);
 	if (len > 0)
-	{
 		write(1, s, len);
-	}
+}
+
+void	write_char(char c)
+{
+	int	dummy;
+
+	dummy = write(1, &c, 1);
+	(void)dummy;
 }
 
 void	write_int(int n)
 {
-	int	t;
-	int	m;
+	char	buf[12];
+	int		idx;
+	int		t;
 
+	idx = 0;
 	if (n == 0)
 	{
 		write_char('0');
@@ -58,17 +57,17 @@ void	write_int(int n)
 		write_char('-');
 		n = -n;
 	}
-	m = 1;
-	t = n;
-	while (t >= 10)
+	while (n > 0)
 	{
-		m = m * 10;
-		t = t / 10;
+		t = n % 10;
+		buf[idx] = (char)('0' + t);
+		idx++;
+		n = n / 10;
 	}
-	while (m > 0)
+	while (idx > 0)
 	{
-		write_char((char)('0' + (n / m) % 10));
-		m = m / 10;
+		idx--;
+		write_char(buf[idx]);
 	}
 }
 
@@ -87,9 +86,7 @@ void	print_grid(int *grid, int n)
 			idx = i * n + j;
 			write_int(grid[idx]);
 			if (j + 1 < n)
-			{
 				write_char(' ');
-			}
 			j++;
 		}
 		write_char('\n');
