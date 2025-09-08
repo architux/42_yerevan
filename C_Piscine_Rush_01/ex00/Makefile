@@ -69,8 +69,10 @@ exit: $(TARGET)
 	@echo "clues: 16"
 	@echo -e "output: ${YELLOW_COLOR}" ; ./$(TARGET) "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" ; echo -e "${RESET_COLOR}returned exit code: $$?" || true
 
-test: $(TARGET)
-	@echo "=== Running 4x4 ==="
+test: test_sym
+
+test_sym: $(TARGET)
+	@echo "=== Running 4x4 symmetric test case ==="
 	@echo -e "Expected output:${YELLOW_COLOR}"
 	@echo "1 2 3 4"
 	@echo "2 3 4 1"
@@ -80,7 +82,7 @@ test: $(TARGET)
 	@./$(TARGET) "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" || true
 	@echo -e "${RESET_COLOR}"
 
-	@echo "=== Running 5x5 ==="
+	@echo "=== Running 5x5 symmetric test case ==="
 	@echo -e "Expected output:${YELLOW_COLOR}"
 	@echo "1 2 3 4 5"
 	@echo "2 3 4 5 1"
@@ -90,8 +92,7 @@ test: $(TARGET)
 	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
 	@./$(TARGET) "5 4 3 2 1 1 2 2 2 2 5 4 3 2 1 1 2 2 2 2" || true
 	@echo -e "${RESET_COLOR}"
-
-	@echo "=== Running 6x6 ==="
+	@echo "=== Running 6x6 symmetric test case ==="
 	@echo -e "Expected output:${YELLOW_COLOR}"
 	@echo "1 2 3 4 5 6"
 	@echo "2 3 4 5 6 1"
@@ -103,7 +104,7 @@ test: $(TARGET)
 	@./$(TARGET) "6 5 4 3 2 1 1 2 2 2 2 2 6 5 4 3 2 1 1 2 2 2 2 2" || true
 	@echo -e "${RESET_COLOR}"
 
-	@echo "=== Running 7x7 ==="
+	@echo "=== Running 7x7 symmetric test case ==="
 	@echo -e "Expected output:${YELLOW_COLOR}"
 	@echo "1 2 3 4 5 6 7"
 	@echo "2 3 4 5 6 7 1"
@@ -116,7 +117,7 @@ test: $(TARGET)
 	@./$(TARGET) "7 6 5 4 3 2 1 1 2 2 2 2 2 2 7 6 5 4 3 2 1 1 2 2 2 2 2 2" || true
 	@echo -e "${RESET_COLOR}"
 
-	@echo "=== Running 8x8 ==="
+	@echo "=== Running 8x8 symmetric test case ==="
 	@echo -e "Expected output:${YELLOW_COLOR}"
 	@echo "1 2 3 4 5 6 7 8"
 	@echo "2 3 4 5 6 7 8 1"
@@ -130,7 +131,7 @@ test: $(TARGET)
 	@./$(TARGET) "8 7 6 5 4 3 2 1 1 2 2 2 2 2 2 2 8 7 6 5 4 3 2 1 1 2 2 2 2 2 2 2" || true
 	@echo -e "${RESET_COLOR}"
 
-	@echo "=== Running 9x9 ==="
+	@echo "=== Running 9x9 symmetric test case ==="
 	@echo -e "Expected output:${YELLOW_COLOR}"
 	@echo "1 2 3 4 5 6 7 8 9"
 	@echo "2 3 4 5 6 7 8 9 1"
@@ -143,4 +144,112 @@ test: $(TARGET)
 	@echo "9 1 2 3 4 5 6 7 8"
 	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
 	@./$(TARGET) "9 8 7 6 5 4 3 2 1 1 2 2 2 2 2 2 2 2 9 8 7 6 5 4 3 2 1 1 2 2 2 2 2 2 2 2" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 10x10 symmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "1 2 3 4 5 6 7 8 9 10"
+	@echo "2 3 4 5 6 7 8 9 10 1"
+	@echo "3 4 5 6 7 8 9 10 1 2"
+	@echo "4 5 6 7 8 9 10 1 2 3"
+	@echo "5 6 7 8 9 10 1 2 3 4"
+	@echo "6 7 8 9 10 1 2 3 4 5"
+	@echo "7 8 9 10 1 2 3 4 5 6"
+	@echo "8 9 10 1 2 3 4 5 6 7"
+	@echo "9 10 1 2 3 4 5 6 7 8"
+	@echo "10 1 2 3 4 5 6 7 8 9"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "10 9 8 7 6 5 4 3 2 1 1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1 1 2 3 4 5 6 7 8 9 10" || true
+	@echo -e "${RESET_COLOR}"
+
+test_asym: $(TARGET)
+	@echo "=== Running 4x4 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "2 1 4 3"
+	@echo "3 4 1 2"
+	@echo "1 3 2 4"
+	@echo "4 2 3 1"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "3 2 1 2 1 3 2 2 2 2 3 1 2 2 1 3" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 5x5 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "2 5 1 3 4"
+	@echo "4 1 3 5 2"
+	@echo "5 3 4 2 1"
+	@echo "1 2 5 4 3"
+	@echo "3 4 2 1 5"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "3 1 4 2 2 2 2 2 3 1 2 2 1 3 3 2 2 4 3 1" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 6x6 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "3 1 6 2 5 4"
+	@echo "4 2 1 3 6 5"
+	@echo "5 3 2 4 1 6"
+	@echo "6 4 3 5 2 1"
+	@echo "1 5 4 6 3 2"
+	@echo "2 6 5 1 4 3"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "4 6 1 5 2 3 2 1 2 2 2 2 2 2 2 1 3 2 3 2 1 4 3 4" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 7x7 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "4 1 7 3 6 2 5"
+	@echo "5 2 1 4 7 3 6"
+	@echo "6 3 2 5 1 4 7"
+	@echo "7 4 3 6 2 5 1"
+	@echo "1 5 4 7 3 6 2"
+	@echo "2 6 5 1 4 7 3"
+	@echo "3 7 6 2 5 1 4"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "4 7 1 5 2 6 3 2 1 2 2 2 2 2 2 2 2 1 3 3 2 3 2 1 4 3 2 4" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 8x8 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "3 8 1 6 2 7 4 5"
+	@echo "4 1 2 7 3 8 5 6"
+	@echo "5 2 3 8 4 1 6 7"
+	@echo "6 3 4 1 5 2 7 8"
+	@echo "7 4 5 2 6 3 8 1"
+	@echo "8 5 6 3 7 4 1 2"
+	@echo "1 6 7 4 8 5 2 3"
+	@echo "2 7 8 5 1 6 3 4"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "6 1 8 3 7 2 5 4 2 7 1 2 2 2 2 2 2 3 2 3 2 1 4 3 3 2 2 1 2 4 3 3" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 9x9 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "5 2 9 1 6 3 8 4 7"
+	@echo "6 3 1 2 7 4 9 5 8"
+	@echo "7 4 2 3 8 5 1 6 9"
+	@echo "8 5 3 4 9 6 2 7 1"
+	@echo "9 6 4 5 1 7 3 8 2"
+	@echo "1 7 5 6 2 8 4 9 3"
+	@echo "2 8 6 7 3 9 5 1 4"
+	@echo "3 9 7 8 4 1 6 2 5"
+	@echo "4 1 8 9 5 2 7 3 6"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "5 8 1 9 4 7 2 6 3 2 2 2 1 2 2 2 2 2 2 3 3 2 1 4 3 2 2 3 2 1 3 3 2 3 4 3" || true
+	@echo -e "${RESET_COLOR}"
+
+	@echo "=== Running 10x10 asymmetric test case ==="
+	@echo -e "Expected output:${YELLOW_COLOR}"
+	@echo "10  1  9  2  8  3  7  4  6  5"
+	@echo " 9  2  8  3  7  4  6  5 10  1"
+	@echo " 8  3  7  4  6  5 10  1  9  2"
+	@echo " 7  4  6  5 10  1  9  2  8  3"
+	@echo " 6  5 10  1  9  2  8  3  7  4"
+	@echo " 5 10  1  9  2  8  3  7  4  6"
+	@echo " 4  6  5 10  1  9  2  8  3  7"
+	@echo " 3  7  4  6  5 10  1  9  2  8"
+	@echo " 2  8  3  7  4  6  5 10  1  9"
+	@echo " 1  9  2  8  3  7  4  6  5 10"
+	@echo -e "${RESET_COLOR}Solver output:${GREEN_COLOR}"
+	@./$(TARGET) "2 3 3 4 4 5 5 6 6 7 7 6 6 5 5 4 4 3 3 2 2 3 3 4 4 5 5 6 6 7 7 6 6 5 5 4 4 3 3 2" || true
 	@echo -e "${RESET_COLOR}"
