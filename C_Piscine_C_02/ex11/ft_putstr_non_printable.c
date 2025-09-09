@@ -1,14 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/03 19:09:27 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/09 18:28:03 by mvasilev         ###   ########.fr       */
+/*   Created: 2025/09/08 21:13:56 by mvasilev          #+#    #+#             */
+/*   Updated: 2025/09/09 19:02:05 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 int	ft_char_is_printable(char c)
 {
@@ -25,17 +29,28 @@ int	ft_char_is_printable(char c)
 	return (is_printable);
 }
 
-int	ft_str_is_printable(char *str)
+void	ft_putchar(char c)
 {
-	int	is_printable;
+	write(1, &c, 1);
+}
 
-	is_printable = 1;
-	while (*str)
+void	ft_putstr_non_printable(char *str)
+{
+	char	*hex_values;
+	int		i;
+
+	hex_values = "0123456789abcdef";
+	i = 0;
+	while (str[i])
 	{
-		if (ft_char_is_printable(*str))
-			str++;
+		if (ft_char_is_printable(str[i]))
+			ft_putchar(str[i]);
 		else
-			return (!is_printable);
+		{
+			ft_putchar('\\');
+			ft_putchar(hex_values[str[i] / 16]);
+			ft_putchar(hex_values[str[i] % 16]);
+		}
+		i++;
 	}
-	return (is_printable);
 }

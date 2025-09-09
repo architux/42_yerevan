@@ -6,24 +6,32 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 16:53:47 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/03 17:59:15 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/08 19:54:51 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_char_is_upper_alpha(char c)
+{
+	int	is_uppercase;
+
+	if (c >= 'A' && c <= 'Z')
+		is_uppercase = 1;
+	else
+		is_uppercase = 0;
+	return (is_uppercase);
+}
+
 int	ft_str_is_uppercase(char *str)
 {
-	int	is_upper_letter;
+	int	is_uppercase;
 
-	is_upper_letter = 1;
+	is_uppercase = 1;
 	while (*str)
 	{
-		if (*str >= 'A' && *str <= 'Z')
+		if (ft_char_is_upper_alpha(*str))
 			str++;
 		else
-		{
-			is_upper_letter = 0;
-			break ;
-		}
+			return (!is_uppercase);
 	}
-	return (is_upper_letter);
+	return (is_uppercase);
 }

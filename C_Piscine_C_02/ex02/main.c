@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 16:53:55 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/03 17:43:22 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/08 19:30:52 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_str_is_alpha(char *str);
 int	main(void)
 {
 	char	alpha_str[] = "AbCdEfG";
-	int	alpha_result;
+	int		alpha_result;
 	char	non_alpha_str[] = "aBc0eFg";
-	int	non_alpha_result;
+	int		non_alpha_result;
 
 	alpha_result = ft_str_is_alpha(alpha_str);
 	printf("    alpha_str: %s > %i\n", alpha_str, alpha_result);

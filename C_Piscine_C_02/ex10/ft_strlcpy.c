@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/03 20:36:31 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/08 19:56:06 by mvasilev         ###   ########.fr       */
+/*   Created: 2025/09/08 20:21:33 by mvasilev          #+#    #+#             */
+/*   Updated: 2025/09/08 20:33:30 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_char_is_upper_alpha(char c)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	is_uppercase;
+	unsigned int	src_len;
+	int				copy_len;
+	int				i;
 
-	if (c >= 'A' && c <= 'Z')
-		is_uppercase = 1;
-	else
-		is_uppercase = 0;
-	return (is_uppercase);
-}
-
-char	*ft_strlowcase(char *str)
-{
-	int	lower_upper_diff;
-	int	i;
-
-	lower_upper_diff = ('a' - 'A');
-	i = 0;
-	while (str[i])
+	src_len = 0;
+	while (src[src_len])
+		src_len++;
+	if (size > 0)
 	{
-		if (ft_char_is_upper_alpha(str[i]))
-			str[i] += lower_upper_diff;
-		i++;
+		if (src_len < size - 1)
+			copy_len = src_len;
+		else
+			copy_len = size - 1;
+		i = 0;
+		while (i < copy_len)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[copy_len] = '\0';
 	}
-	return (str);
+	return (src_len);
 }
