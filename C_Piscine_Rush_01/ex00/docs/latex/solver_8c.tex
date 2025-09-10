@@ -1,0 +1,122 @@
+\doxysection{solver.\+c File Reference}
+\hypertarget{solver_8c}{}\label{solver_8c}\index{solver.c@{solver.c}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{solver_8c_a5dcc80a0c7899199e965b00a1a227f5b}{INITIAL\+\_\+\+GRID\+\_\+\+VALUE}}~1
+\item 
+\#define \mbox{\hyperlink{solver_8c_a7b424b380d3900f011cdac7af223eb89}{SOLUTION\+\_\+\+FOUND}}~1
+\item 
+\#define \mbox{\hyperlink{solver_8c_a18d55e9a345730ab589bae241b6c9c5e}{NO\+\_\+\+SOLUTION\+\_\+\+FOUND}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{solver_8c_a21871e8a813ff7cb6342a9fe2fba2c23}{check\+\_\+all\+\_\+clues}} (int \texorpdfstring{$\ast$}{*}grid, int \texorpdfstring{$\ast$}{*}clues, int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{solver_8c_a8fdf42d6de0577c41a94c8443499f059}{check\+\_\+row}} (int \texorpdfstring{$\ast$}{*}grid, int square\+\_\+size, int row, int val)
+\item 
+int \mbox{\hyperlink{solver_8c_a1b1ef40b9aeadd153cd681fe38ff66b8}{check\+\_\+col}} (int \texorpdfstring{$\ast$}{*}grid, int square\+\_\+size, int col, int val)
+\item 
+int \mbox{\hyperlink{solver_8c_a4b4d6ba034f2f53e23499f4c24716bad}{solve\+\_\+grid}} (int \texorpdfstring{$\ast$}{*}grid, int \texorpdfstring{$\ast$}{*}clues, int square\+\_\+size, int cursor)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{solver_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{solver_8c_a5dcc80a0c7899199e965b00a1a227f5b}\index{solver.c@{solver.c}!INITIAL\_GRID\_VALUE@{INITIAL\_GRID\_VALUE}}
+\index{INITIAL\_GRID\_VALUE@{INITIAL\_GRID\_VALUE}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_GRID\_VALUE}{INITIAL\_GRID\_VALUE}}
+{\footnotesize\ttfamily \label{solver_8c_a5dcc80a0c7899199e965b00a1a227f5b} 
+\#define INITIAL\+\_\+\+GRID\+\_\+\+VALUE~1}
+
+\Hypertarget{solver_8c_a18d55e9a345730ab589bae241b6c9c5e}\index{solver.c@{solver.c}!NO\_SOLUTION\_FOUND@{NO\_SOLUTION\_FOUND}}
+\index{NO\_SOLUTION\_FOUND@{NO\_SOLUTION\_FOUND}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{NO\_SOLUTION\_FOUND}{NO\_SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{solver_8c_a18d55e9a345730ab589bae241b6c9c5e} 
+\#define NO\+\_\+\+SOLUTION\+\_\+\+FOUND~0}
+
+\Hypertarget{solver_8c_a7b424b380d3900f011cdac7af223eb89}\index{solver.c@{solver.c}!SOLUTION\_FOUND@{SOLUTION\_FOUND}}
+\index{SOLUTION\_FOUND@{SOLUTION\_FOUND}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{SOLUTION\_FOUND}{SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{solver_8c_a7b424b380d3900f011cdac7af223eb89} 
+\#define SOLUTION\+\_\+\+FOUND~1}
+
+
+
+\label{doc-func-members}
+\Hypertarget{solver_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{solver_8c_a21871e8a813ff7cb6342a9fe2fba2c23}\index{solver.c@{solver.c}!check\_all\_clues@{check\_all\_clues}}
+\index{check\_all\_clues@{check\_all\_clues}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{check\_all\_clues()}{check\_all\_clues()}}
+{\footnotesize\ttfamily \label{solver_8c_a21871e8a813ff7cb6342a9fe2fba2c23} 
+int check\+\_\+all\+\_\+clues (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{clues}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8c_a21871e8a813ff7cb6342a9fe2fba2c23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{solver_8c_a21871e8a813ff7cb6342a9fe2fba2c23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8c_a1b1ef40b9aeadd153cd681fe38ff66b8}\index{solver.c@{solver.c}!check\_col@{check\_col}}
+\index{check\_col@{check\_col}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{check\_col()}{check\_col()}}
+{\footnotesize\ttfamily \label{solver_8c_a1b1ef40b9aeadd153cd681fe38ff66b8} 
+int check\+\_\+col (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int}]{square\+\_\+size}{, }\item[{int}]{col}{, }\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{solver_8c_a1b1ef40b9aeadd153cd681fe38ff66b8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8c_a8fdf42d6de0577c41a94c8443499f059}\index{solver.c@{solver.c}!check\_row@{check\_row}}
+\index{check\_row@{check\_row}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{check\_row()}{check\_row()}}
+{\footnotesize\ttfamily \label{solver_8c_a8fdf42d6de0577c41a94c8443499f059} 
+int check\+\_\+row (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int}]{square\+\_\+size}{, }\item[{int}]{row}{, }\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{solver_8c_a8fdf42d6de0577c41a94c8443499f059_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{solver_8c_a4b4d6ba034f2f53e23499f4c24716bad}\index{solver.c@{solver.c}!solve\_grid@{solve\_grid}}
+\index{solve\_grid@{solve\_grid}!solver.c@{solver.c}}
+\doxysubsubsection{\texorpdfstring{solve\_grid()}{solve\_grid()}}
+{\footnotesize\ttfamily \label{solver_8c_a4b4d6ba034f2f53e23499f4c24716bad} 
+int solve\+\_\+grid (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{clues}{, }\item[{int}]{square\+\_\+size}{, }\item[{int}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8c_a4b4d6ba034f2f53e23499f4c24716bad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{solver_8c_a4b4d6ba034f2f53e23499f4c24716bad_icgraph}
+\end{center}
+\end{figure}

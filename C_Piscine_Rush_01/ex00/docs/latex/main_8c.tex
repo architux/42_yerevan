@@ -1,0 +1,259 @@
+\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a9b15efb99fbdb3cae62f3daf002d5ba3}{SQUARE\+\_\+\+SIDES\+\_\+\+COUNT}}~4
+\item 
+\#define \mbox{\hyperlink{main_8c_ade888e95e180dc5b54a8066043917acc}{INITIAL\+\_\+\+CURSOR\+\_\+\+INDEX}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_a7b424b380d3900f011cdac7af223eb89}{SOLUTION\+\_\+\+FOUND}}~1
+\item 
+\#define \mbox{\hyperlink{main_8c_a6df99472dea4419825e78f971371bfb2}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+SUCCESS}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_aa38d363d890fb794f1b2e71fb5cdbbfa}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+STRING}}~1
+\item 
+\#define \mbox{\hyperlink{main_8c_ace599d3bfb72c5f208a402fab55859ed}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+TO\+\_\+\+PARSE}}~2
+\item 
+\#define \mbox{\hyperlink{main_8c_a879472fb9588c8f607e3328d1e98c190}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+INVALID\+\_\+\+CLUES\+\_\+\+COUNT}}~3
+\item 
+\#define \mbox{\hyperlink{main_8c_a49d55f7a908b80d17f638a2e3a2dcc31}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+SOLUTION\+\_\+\+FOUND}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a79db2189c2216dd3be41dbd2e411b64d}{count\+\_\+clues}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_ad2b598e6fe216760937cba9ce7c1bfb1}{parse\+\_\+clues}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, int square\+\_\+size)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a1d549b982a080aa9dea24da0edc121dc}{init\+\_\+grid}} (int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{main_8c_a181699205e38f05a22ed4f87dbf11158}{no\+\_\+clues\+\_\+string\+\_\+error}} (int argc)
+\item 
+int \mbox{\hyperlink{main_8c_aeb91eaf020ae9908f7fff0784c675e4f}{no\+\_\+clues\+\_\+to\+\_\+parse\+\_\+error}} (int clues\+\_\+count)
+\item 
+int \mbox{\hyperlink{main_8c_a5ce4df56399c027d6ab1b044d9293f2f}{invalid\+\_\+clues\+\_\+count\+\_\+error}} (int clues\+\_\+count)
+\item 
+int \mbox{\hyperlink{main_8c_a6a845a777eb0f001aa554b790bc24c05}{no\+\_\+solution\+\_\+found\+\_\+error}} (int solver\+\_\+result)
+\item 
+int \mbox{\hyperlink{main_8c_a4b4d6ba034f2f53e23499f4c24716bad}{solve\+\_\+grid}} (int \texorpdfstring{$\ast$}{*}grid, int \texorpdfstring{$\ast$}{*}clues, int square\+\_\+size, int cursor)
+\item 
+void \mbox{\hyperlink{main_8c_a7a29e751bf92be413970495fcd2517a9}{print\+\_\+grid}} (int \texorpdfstring{$\ast$}{*}grid, int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{main_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8c_a879472fb9588c8f607e3328d1e98c190}\index{main.c@{main.c}!EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT@{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}}
+\index{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT@{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}}
+{\footnotesize\ttfamily \label{main_8c_a879472fb9588c8f607e3328d1e98c190} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+INVALID\+\_\+\+CLUES\+\_\+\+COUNT~3}
+
+\Hypertarget{main_8c_aa38d363d890fb794f1b2e71fb5cdbbfa}\index{main.c@{main.c}!EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}}
+\index{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}}
+{\footnotesize\ttfamily \label{main_8c_aa38d363d890fb794f1b2e71fb5cdbbfa} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+STRING~1}
+
+\Hypertarget{main_8c_ace599d3bfb72c5f208a402fab55859ed}\index{main.c@{main.c}!EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}}
+\index{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}}
+{\footnotesize\ttfamily \label{main_8c_ace599d3bfb72c5f208a402fab55859ed} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+TO\+\_\+\+PARSE~2}
+
+\Hypertarget{main_8c_a49d55f7a908b80d17f638a2e3a2dcc31}\index{main.c@{main.c}!EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND@{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}}
+\index{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND@{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{main_8c_a49d55f7a908b80d17f638a2e3a2dcc31} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+SOLUTION\+\_\+\+FOUND~4}
+
+\Hypertarget{main_8c_a6df99472dea4419825e78f971371bfb2}\index{main.c@{main.c}!EXIT\_CODE\_\_SUCCESS@{EXIT\_CODE\_\_SUCCESS}}
+\index{EXIT\_CODE\_\_SUCCESS@{EXIT\_CODE\_\_SUCCESS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_SUCCESS}{EXIT\_CODE\_\_SUCCESS}}
+{\footnotesize\ttfamily \label{main_8c_a6df99472dea4419825e78f971371bfb2} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+SUCCESS~0}
+
+\Hypertarget{main_8c_ade888e95e180dc5b54a8066043917acc}\index{main.c@{main.c}!INITIAL\_CURSOR\_INDEX@{INITIAL\_CURSOR\_INDEX}}
+\index{INITIAL\_CURSOR\_INDEX@{INITIAL\_CURSOR\_INDEX}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_CURSOR\_INDEX}{INITIAL\_CURSOR\_INDEX}}
+{\footnotesize\ttfamily \label{main_8c_ade888e95e180dc5b54a8066043917acc} 
+\#define INITIAL\+\_\+\+CURSOR\+\_\+\+INDEX~0}
+
+\Hypertarget{main_8c_a7b424b380d3900f011cdac7af223eb89}\index{main.c@{main.c}!SOLUTION\_FOUND@{SOLUTION\_FOUND}}
+\index{SOLUTION\_FOUND@{SOLUTION\_FOUND}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SOLUTION\_FOUND}{SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{main_8c_a7b424b380d3900f011cdac7af223eb89} 
+\#define SOLUTION\+\_\+\+FOUND~1}
+
+\Hypertarget{main_8c_a9b15efb99fbdb3cae62f3daf002d5ba3}\index{main.c@{main.c}!SQUARE\_SIDES\_COUNT@{SQUARE\_SIDES\_COUNT}}
+\index{SQUARE\_SIDES\_COUNT@{SQUARE\_SIDES\_COUNT}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SQUARE\_SIDES\_COUNT}{SQUARE\_SIDES\_COUNT}}
+{\footnotesize\ttfamily \label{main_8c_a9b15efb99fbdb3cae62f3daf002d5ba3} 
+\#define SQUARE\+\_\+\+SIDES\+\_\+\+COUNT~4}
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a79db2189c2216dd3be41dbd2e411b64d}\index{main.c@{main.c}!count\_clues@{count\_clues}}
+\index{count\_clues@{count\_clues}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{count\_clues()}{count\_clues()}}
+{\footnotesize\ttfamily \label{main_8c_a79db2189c2216dd3be41dbd2e411b64d} 
+int count\+\_\+clues (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{main_8c_a79db2189c2216dd3be41dbd2e411b64d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a1d549b982a080aa9dea24da0edc121dc}\index{main.c@{main.c}!init\_grid@{init\_grid}}
+\index{init\_grid@{init\_grid}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{init\_grid()}{init\_grid()}}
+{\footnotesize\ttfamily \label{main_8c_a1d549b982a080aa9dea24da0edc121dc} 
+int \texorpdfstring{$\ast$}{*} init\+\_\+grid (\begin{DoxyParamCaption}\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{main_8c_a1d549b982a080aa9dea24da0edc121dc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a5ce4df56399c027d6ab1b044d9293f2f}\index{main.c@{main.c}!invalid\_clues\_count\_error@{invalid\_clues\_count\_error}}
+\index{invalid\_clues\_count\_error@{invalid\_clues\_count\_error}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{invalid\_clues\_count\_error()}{invalid\_clues\_count\_error()}}
+{\footnotesize\ttfamily \label{main_8c_a5ce4df56399c027d6ab1b044d9293f2f} 
+int invalid\+\_\+clues\+\_\+count\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{clues\+\_\+count}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{main_8c_a5ce4df56399c027d6ab1b044d9293f2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a181699205e38f05a22ed4f87dbf11158}\index{main.c@{main.c}!no\_clues\_string\_error@{no\_clues\_string\_error}}
+\index{no\_clues\_string\_error@{no\_clues\_string\_error}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{no\_clues\_string\_error()}{no\_clues\_string\_error()}}
+{\footnotesize\ttfamily \label{main_8c_a181699205e38f05a22ed4f87dbf11158} 
+int no\+\_\+clues\+\_\+string\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{argc}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{main_8c_a181699205e38f05a22ed4f87dbf11158_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_aeb91eaf020ae9908f7fff0784c675e4f}\index{main.c@{main.c}!no\_clues\_to\_parse\_error@{no\_clues\_to\_parse\_error}}
+\index{no\_clues\_to\_parse\_error@{no\_clues\_to\_parse\_error}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{no\_clues\_to\_parse\_error()}{no\_clues\_to\_parse\_error()}}
+{\footnotesize\ttfamily \label{main_8c_aeb91eaf020ae9908f7fff0784c675e4f} 
+int no\+\_\+clues\+\_\+to\+\_\+parse\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{clues\+\_\+count}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{main_8c_aeb91eaf020ae9908f7fff0784c675e4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a6a845a777eb0f001aa554b790bc24c05}\index{main.c@{main.c}!no\_solution\_found\_error@{no\_solution\_found\_error}}
+\index{no\_solution\_found\_error@{no\_solution\_found\_error}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{no\_solution\_found\_error()}{no\_solution\_found\_error()}}
+{\footnotesize\ttfamily \label{main_8c_a6a845a777eb0f001aa554b790bc24c05} 
+int no\+\_\+solution\+\_\+found\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{solver\+\_\+result}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{main_8c_a6a845a777eb0f001aa554b790bc24c05_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_ad2b598e6fe216760937cba9ce7c1bfb1}\index{main.c@{main.c}!parse\_clues@{parse\_clues}}
+\index{parse\_clues@{parse\_clues}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{parse\_clues()}{parse\_clues()}}
+{\footnotesize\ttfamily \label{main_8c_ad2b598e6fe216760937cba9ce7c1bfb1} 
+int \texorpdfstring{$\ast$}{*} parse\+\_\+clues (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{main_8c_ad2b598e6fe216760937cba9ce7c1bfb1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a7a29e751bf92be413970495fcd2517a9}\index{main.c@{main.c}!print\_grid@{print\_grid}}
+\index{print\_grid@{print\_grid}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{print\_grid()}{print\_grid()}}
+{\footnotesize\ttfamily \label{main_8c_a7a29e751bf92be413970495fcd2517a9} 
+void print\+\_\+grid (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{main_8c_a7a29e751bf92be413970495fcd2517a9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a4b4d6ba034f2f53e23499f4c24716bad}\index{main.c@{main.c}!solve\_grid@{solve\_grid}}
+\index{solve\_grid@{solve\_grid}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{solve\_grid()}{solve\_grid()}}
+{\footnotesize\ttfamily \label{main_8c_a4b4d6ba034f2f53e23499f4c24716bad} 
+int solve\+\_\+grid (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{clues}{, }\item[{int}]{square\+\_\+size}{, }\item[{int}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a4b4d6ba034f2f53e23499f4c24716bad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{main_8c_a4b4d6ba034f2f53e23499f4c24716bad_icgraph}
+\end{center}
+\end{figure}

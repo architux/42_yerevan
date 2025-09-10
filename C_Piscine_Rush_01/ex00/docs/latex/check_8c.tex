@@ -1,0 +1,155 @@
+\doxysection{check.\+c File Reference}
+\hypertarget{check_8c}{}\label{check_8c}\index{check.c@{check.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for check.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{check_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{check_8c_a7b424b380d3900f011cdac7af223eb89}{SOLUTION\+\_\+\+FOUND}}~1
+\item 
+\#define \mbox{\hyperlink{check_8c_a18d55e9a345730ab589bae241b6c9c5e}{NO\+\_\+\+SOLUTION\+\_\+\+FOUND}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{check_8c_a819919c9c0b20e3ab94f293bb3aa3ab9}{count\+\_\+visible}} (int \texorpdfstring{$\ast$}{*}line, int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{check_8c_a9f567b488719e781e686023ac13ef057}{check\+\_\+clue\+\_\+line}} (int \texorpdfstring{$\ast$}{*}line, int clue\+\_\+left, int clue\+\_\+right, int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{check_8c_a38570858cbbc90a33ede0f90827c4823}{check\+\_\+line\+\_\+first\+\_\+pass}} (int \texorpdfstring{$\ast$}{*}line, int \texorpdfstring{$\ast$}{*}grid, int \texorpdfstring{$\ast$}{*}clues, int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{check_8c_abf8d801f4b0d3f44703ee26c29cbc7ea}{check\+\_\+line\+\_\+second\+\_\+pass}} (int \texorpdfstring{$\ast$}{*}line, int \texorpdfstring{$\ast$}{*}grid, int \texorpdfstring{$\ast$}{*}clues, int square\+\_\+size)
+\item 
+int \mbox{\hyperlink{check_8c_a21871e8a813ff7cb6342a9fe2fba2c23}{check\+\_\+all\+\_\+clues}} (int \texorpdfstring{$\ast$}{*}grid, int \texorpdfstring{$\ast$}{*}clues, int square\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{check_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{check_8c_a18d55e9a345730ab589bae241b6c9c5e}\index{check.c@{check.c}!NO\_SOLUTION\_FOUND@{NO\_SOLUTION\_FOUND}}
+\index{NO\_SOLUTION\_FOUND@{NO\_SOLUTION\_FOUND}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{NO\_SOLUTION\_FOUND}{NO\_SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{check_8c_a18d55e9a345730ab589bae241b6c9c5e} 
+\#define NO\+\_\+\+SOLUTION\+\_\+\+FOUND~0}
+
+\Hypertarget{check_8c_a7b424b380d3900f011cdac7af223eb89}\index{check.c@{check.c}!SOLUTION\_FOUND@{SOLUTION\_FOUND}}
+\index{SOLUTION\_FOUND@{SOLUTION\_FOUND}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{SOLUTION\_FOUND}{SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{check_8c_a7b424b380d3900f011cdac7af223eb89} 
+\#define SOLUTION\+\_\+\+FOUND~1}
+
+
+
+\label{doc-func-members}
+\Hypertarget{check_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{check_8c_a21871e8a813ff7cb6342a9fe2fba2c23}\index{check.c@{check.c}!check\_all\_clues@{check\_all\_clues}}
+\index{check\_all\_clues@{check\_all\_clues}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{check\_all\_clues()}{check\_all\_clues()}}
+{\footnotesize\ttfamily \label{check_8c_a21871e8a813ff7cb6342a9fe2fba2c23} 
+int check\+\_\+all\+\_\+clues (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{clues}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_a21871e8a813ff7cb6342a9fe2fba2c23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{check_8c_a21871e8a813ff7cb6342a9fe2fba2c23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{check_8c_a9f567b488719e781e686023ac13ef057}\index{check.c@{check.c}!check\_clue\_line@{check\_clue\_line}}
+\index{check\_clue\_line@{check\_clue\_line}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{check\_clue\_line()}{check\_clue\_line()}}
+{\footnotesize\ttfamily \label{check_8c_a9f567b488719e781e686023ac13ef057} 
+int check\+\_\+clue\+\_\+line (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{line}{, }\item[{int}]{clue\+\_\+left}{, }\item[{int}]{clue\+\_\+right}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{check_8c_a9f567b488719e781e686023ac13ef057_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_a9f567b488719e781e686023ac13ef057_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{check_8c_a38570858cbbc90a33ede0f90827c4823}\index{check.c@{check.c}!check\_line\_first\_pass@{check\_line\_first\_pass}}
+\index{check\_line\_first\_pass@{check\_line\_first\_pass}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{check\_line\_first\_pass()}{check\_line\_first\_pass()}}
+{\footnotesize\ttfamily \label{check_8c_a38570858cbbc90a33ede0f90827c4823} 
+int check\+\_\+line\+\_\+first\+\_\+pass (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{line}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{clues}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_a38570858cbbc90a33ede0f90827c4823_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_a38570858cbbc90a33ede0f90827c4823_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{check_8c_abf8d801f4b0d3f44703ee26c29cbc7ea}\index{check.c@{check.c}!check\_line\_second\_pass@{check\_line\_second\_pass}}
+\index{check\_line\_second\_pass@{check\_line\_second\_pass}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{check\_line\_second\_pass()}{check\_line\_second\_pass()}}
+{\footnotesize\ttfamily \label{check_8c_abf8d801f4b0d3f44703ee26c29cbc7ea} 
+int check\+\_\+line\+\_\+second\+\_\+pass (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{line}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{grid}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{clues}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_abf8d801f4b0d3f44703ee26c29cbc7ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_abf8d801f4b0d3f44703ee26c29cbc7ea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{check_8c_a819919c9c0b20e3ab94f293bb3aa3ab9}\index{check.c@{check.c}!count\_visible@{count\_visible}}
+\index{count\_visible@{count\_visible}!check.c@{check.c}}
+\doxysubsubsection{\texorpdfstring{count\_visible()}{count\_visible()}}
+{\footnotesize\ttfamily \label{check_8c_a819919c9c0b20e3ab94f293bb3aa3ab9} 
+int count\+\_\+visible (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{line}{, }\item[{int}]{square\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{check_8c_a819919c9c0b20e3ab94f293bb3aa3ab9_icgraph}
+\end{center}
+\end{figure}

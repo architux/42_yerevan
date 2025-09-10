@@ -1,4 +1,6 @@
 ex00/*
+!ex00/docs/
+!ex00/docs/*
 !ex00/*.c
 !ex00/Doxyfile
 !ex00/Makefile

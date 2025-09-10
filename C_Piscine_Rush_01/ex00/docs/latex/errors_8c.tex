@@ -1,0 +1,187 @@
+\doxysection{errors.\+c File Reference}
+\hypertarget{errors_8c}{}\label{errors_8c}\index{errors.c@{errors.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for errors.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{errors_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{errors_8c_a9b15efb99fbdb3cae62f3daf002d5ba3}{SQUARE\+\_\+\+SIDES\+\_\+\+COUNT}}~4
+\item 
+\#define \mbox{\hyperlink{errors_8c_a9d9260e15b074c2e27d389723104ead9}{MIN\+\_\+\+SQUARE\+\_\+\+SIZE}}~4
+\item 
+\#define \mbox{\hyperlink{errors_8c_a118a2b1125b7382b0e85183142366ab2}{MAX\+\_\+\+SQUARE\+\_\+\+SIZE}}~9
+\item 
+\#define \mbox{\hyperlink{errors_8c_a944aa554e87c2c336ddc5aa9fc9b8d60}{VALID\+\_\+\+ARGC\+\_\+\+COUNT}}~2
+\item 
+\#define \mbox{\hyperlink{errors_8c_a18d55e9a345730ab589bae241b6c9c5e}{NO\+\_\+\+SOLUTION\+\_\+\+FOUND}}~0
+\item 
+\#define \mbox{\hyperlink{errors_8c_a6df99472dea4419825e78f971371bfb2}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+SUCCESS}}~0
+\item 
+\#define \mbox{\hyperlink{errors_8c_aa38d363d890fb794f1b2e71fb5cdbbfa}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+STRING}}~1
+\item 
+\#define \mbox{\hyperlink{errors_8c_ace599d3bfb72c5f208a402fab55859ed}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+TO\+\_\+\+PARSE}}~2
+\item 
+\#define \mbox{\hyperlink{errors_8c_a879472fb9588c8f607e3328d1e98c190}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+INVALID\+\_\+\+CLUES\+\_\+\+COUNT}}~3
+\item 
+\#define \mbox{\hyperlink{errors_8c_a49d55f7a908b80d17f638a2e3a2dcc31}{EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+SOLUTION\+\_\+\+FOUND}}~4
+\item 
+\#define \mbox{\hyperlink{errors_8c_a8b6e662367029d54bd980f8cdd744ff8}{ERROR\+\_\+\+TEXT}}~"{}Error\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{errors_8c_a18024746cf4c85405858ffe1b8278d34}{ERROR\+\_\+\+TEXT\+\_\+\+SIZE}}~6
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{errors_8c_a181699205e38f05a22ed4f87dbf11158}{no\+\_\+clues\+\_\+string\+\_\+error}} (int argc)
+\item 
+int \mbox{\hyperlink{errors_8c_aeb91eaf020ae9908f7fff0784c675e4f}{no\+\_\+clues\+\_\+to\+\_\+parse\+\_\+error}} (int clues\+\_\+count)
+\item 
+int \mbox{\hyperlink{errors_8c_a5ce4df56399c027d6ab1b044d9293f2f}{invalid\+\_\+clues\+\_\+count\+\_\+error}} (int clues\+\_\+count)
+\item 
+int \mbox{\hyperlink{errors_8c_a6a845a777eb0f001aa554b790bc24c05}{no\+\_\+solution\+\_\+found\+\_\+error}} (int solver\+\_\+result)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{errors_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{errors_8c_a8b6e662367029d54bd980f8cdd744ff8}\index{errors.c@{errors.c}!ERROR\_TEXT@{ERROR\_TEXT}}
+\index{ERROR\_TEXT@{ERROR\_TEXT}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{ERROR\_TEXT}{ERROR\_TEXT}}
+{\footnotesize\ttfamily \label{errors_8c_a8b6e662367029d54bd980f8cdd744ff8} 
+\#define ERROR\+\_\+\+TEXT~"{}Error\textbackslash{}n"{}}
+
+\Hypertarget{errors_8c_a18024746cf4c85405858ffe1b8278d34}\index{errors.c@{errors.c}!ERROR\_TEXT\_SIZE@{ERROR\_TEXT\_SIZE}}
+\index{ERROR\_TEXT\_SIZE@{ERROR\_TEXT\_SIZE}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{ERROR\_TEXT\_SIZE}{ERROR\_TEXT\_SIZE}}
+{\footnotesize\ttfamily \label{errors_8c_a18024746cf4c85405858ffe1b8278d34} 
+\#define ERROR\+\_\+\+TEXT\+\_\+\+SIZE~6}
+
+\Hypertarget{errors_8c_a879472fb9588c8f607e3328d1e98c190}\index{errors.c@{errors.c}!EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT@{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}}
+\index{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT@{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}{EXIT\_CODE\_\_ERROR\_\_INVALID\_CLUES\_COUNT}}
+{\footnotesize\ttfamily \label{errors_8c_a879472fb9588c8f607e3328d1e98c190} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+INVALID\+\_\+\+CLUES\+\_\+\+COUNT~3}
+
+\Hypertarget{errors_8c_aa38d363d890fb794f1b2e71fb5cdbbfa}\index{errors.c@{errors.c}!EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}}
+\index{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_STRING}}
+{\footnotesize\ttfamily \label{errors_8c_aa38d363d890fb794f1b2e71fb5cdbbfa} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+STRING~1}
+
+\Hypertarget{errors_8c_ace599d3bfb72c5f208a402fab55859ed}\index{errors.c@{errors.c}!EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}}
+\index{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE@{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}{EXIT\_CODE\_\_ERROR\_\_NO\_CLUES\_TO\_PARSE}}
+{\footnotesize\ttfamily \label{errors_8c_ace599d3bfb72c5f208a402fab55859ed} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+CLUES\+\_\+\+TO\+\_\+\+PARSE~2}
+
+\Hypertarget{errors_8c_a49d55f7a908b80d17f638a2e3a2dcc31}\index{errors.c@{errors.c}!EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND@{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}}
+\index{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND@{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}{EXIT\_CODE\_\_ERROR\_\_NO\_SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{errors_8c_a49d55f7a908b80d17f638a2e3a2dcc31} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+ERROR\+\_\+\+\_\+\+NO\+\_\+\+SOLUTION\+\_\+\+FOUND~4}
+
+\Hypertarget{errors_8c_a6df99472dea4419825e78f971371bfb2}\index{errors.c@{errors.c}!EXIT\_CODE\_\_SUCCESS@{EXIT\_CODE\_\_SUCCESS}}
+\index{EXIT\_CODE\_\_SUCCESS@{EXIT\_CODE\_\_SUCCESS}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CODE\_\_SUCCESS}{EXIT\_CODE\_\_SUCCESS}}
+{\footnotesize\ttfamily \label{errors_8c_a6df99472dea4419825e78f971371bfb2} 
+\#define EXIT\+\_\+\+CODE\+\_\+\+\_\+\+SUCCESS~0}
+
+\Hypertarget{errors_8c_a118a2b1125b7382b0e85183142366ab2}\index{errors.c@{errors.c}!MAX\_SQUARE\_SIZE@{MAX\_SQUARE\_SIZE}}
+\index{MAX\_SQUARE\_SIZE@{MAX\_SQUARE\_SIZE}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_SQUARE\_SIZE}{MAX\_SQUARE\_SIZE}}
+{\footnotesize\ttfamily \label{errors_8c_a118a2b1125b7382b0e85183142366ab2} 
+\#define MAX\+\_\+\+SQUARE\+\_\+\+SIZE~9}
+
+\Hypertarget{errors_8c_a9d9260e15b074c2e27d389723104ead9}\index{errors.c@{errors.c}!MIN\_SQUARE\_SIZE@{MIN\_SQUARE\_SIZE}}
+\index{MIN\_SQUARE\_SIZE@{MIN\_SQUARE\_SIZE}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_SQUARE\_SIZE}{MIN\_SQUARE\_SIZE}}
+{\footnotesize\ttfamily \label{errors_8c_a9d9260e15b074c2e27d389723104ead9} 
+\#define MIN\+\_\+\+SQUARE\+\_\+\+SIZE~4}
+
+\Hypertarget{errors_8c_a18d55e9a345730ab589bae241b6c9c5e}\index{errors.c@{errors.c}!NO\_SOLUTION\_FOUND@{NO\_SOLUTION\_FOUND}}
+\index{NO\_SOLUTION\_FOUND@{NO\_SOLUTION\_FOUND}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{NO\_SOLUTION\_FOUND}{NO\_SOLUTION\_FOUND}}
+{\footnotesize\ttfamily \label{errors_8c_a18d55e9a345730ab589bae241b6c9c5e} 
+\#define NO\+\_\+\+SOLUTION\+\_\+\+FOUND~0}
+
+\Hypertarget{errors_8c_a9b15efb99fbdb3cae62f3daf002d5ba3}\index{errors.c@{errors.c}!SQUARE\_SIDES\_COUNT@{SQUARE\_SIDES\_COUNT}}
+\index{SQUARE\_SIDES\_COUNT@{SQUARE\_SIDES\_COUNT}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{SQUARE\_SIDES\_COUNT}{SQUARE\_SIDES\_COUNT}}
+{\footnotesize\ttfamily \label{errors_8c_a9b15efb99fbdb3cae62f3daf002d5ba3} 
+\#define SQUARE\+\_\+\+SIDES\+\_\+\+COUNT~4}
+
+\Hypertarget{errors_8c_a944aa554e87c2c336ddc5aa9fc9b8d60}\index{errors.c@{errors.c}!VALID\_ARGC\_COUNT@{VALID\_ARGC\_COUNT}}
+\index{VALID\_ARGC\_COUNT@{VALID\_ARGC\_COUNT}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{VALID\_ARGC\_COUNT}{VALID\_ARGC\_COUNT}}
+{\footnotesize\ttfamily \label{errors_8c_a944aa554e87c2c336ddc5aa9fc9b8d60} 
+\#define VALID\+\_\+\+ARGC\+\_\+\+COUNT~2}
+
+
+
+\label{doc-func-members}
+\Hypertarget{errors_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{errors_8c_a5ce4df56399c027d6ab1b044d9293f2f}\index{errors.c@{errors.c}!invalid\_clues\_count\_error@{invalid\_clues\_count\_error}}
+\index{invalid\_clues\_count\_error@{invalid\_clues\_count\_error}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{invalid\_clues\_count\_error()}{invalid\_clues\_count\_error()}}
+{\footnotesize\ttfamily \label{errors_8c_a5ce4df56399c027d6ab1b044d9293f2f} 
+int invalid\+\_\+clues\+\_\+count\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{clues\+\_\+count}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{errors_8c_a5ce4df56399c027d6ab1b044d9293f2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{errors_8c_a181699205e38f05a22ed4f87dbf11158}\index{errors.c@{errors.c}!no\_clues\_string\_error@{no\_clues\_string\_error}}
+\index{no\_clues\_string\_error@{no\_clues\_string\_error}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{no\_clues\_string\_error()}{no\_clues\_string\_error()}}
+{\footnotesize\ttfamily \label{errors_8c_a181699205e38f05a22ed4f87dbf11158} 
+int no\+\_\+clues\+\_\+string\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{argc}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{errors_8c_a181699205e38f05a22ed4f87dbf11158_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{errors_8c_aeb91eaf020ae9908f7fff0784c675e4f}\index{errors.c@{errors.c}!no\_clues\_to\_parse\_error@{no\_clues\_to\_parse\_error}}
+\index{no\_clues\_to\_parse\_error@{no\_clues\_to\_parse\_error}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{no\_clues\_to\_parse\_error()}{no\_clues\_to\_parse\_error()}}
+{\footnotesize\ttfamily \label{errors_8c_aeb91eaf020ae9908f7fff0784c675e4f} 
+int no\+\_\+clues\+\_\+to\+\_\+parse\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{clues\+\_\+count}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{errors_8c_aeb91eaf020ae9908f7fff0784c675e4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{errors_8c_a6a845a777eb0f001aa554b790bc24c05}\index{errors.c@{errors.c}!no\_solution\_found\_error@{no\_solution\_found\_error}}
+\index{no\_solution\_found\_error@{no\_solution\_found\_error}!errors.c@{errors.c}}
+\doxysubsubsection{\texorpdfstring{no\_solution\_found\_error()}{no\_solution\_found\_error()}}
+{\footnotesize\ttfamily \label{errors_8c_a6a845a777eb0f001aa554b790bc24c05} 
+int no\+\_\+solution\+\_\+found\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{solver\+\_\+result}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{errors_8c_a6a845a777eb0f001aa554b790bc24c05_icgraph}
+\end{center}
+\end{figure}
