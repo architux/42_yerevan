@@ -29,7 +29,7 @@ docs:
 	doxygen Doxyfile
 	@echo "Docs have been generated in docs/html/index.html"
 
-exit: $(TARGET)
+test_exit_codes: $(TARGET)
 	@printf "${BRIGHT_RED_COLOR}EXIT_CODE__ERROR__NO_CLUES_STRING${RESET_COLOR}\n"
 	@echo "implemented exit code: 1"
 	@printf "test command: ${YELLOW_COLOR}./rush01${RESET_COLOR}\n"
@@ -75,7 +75,7 @@ exit: $(TARGET)
 
 test: test_sym
 
-test_sym: $(TARGET)
+test_sym_squares: $(TARGET)
 	@echo "=== Running 4x4 symmetric test case ==="
 	@printf "Expected output:\n${YELLOW_COLOR}"
 	@echo "1 2 3 4"
@@ -166,7 +166,7 @@ test_sym: $(TARGET)
 	@./$(TARGET) "10 9 8 7 6 5 4 3 2 1 1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1 1 2 3 4 5 6 7 8 9 10" || true
 	@printf "${RESET_COLOR}\n"
 
-test_asym: $(TARGET)
+test_asym_squares: $(TARGET)
 	@echo "=== Running 4x4 asymmetric test case ==="
 	@printf "Expected output:\n${YELLOW_COLOR}"
 	@echo "2 1 4 3"
