@@ -1,4 +1,7 @@
+ex00/*
 !ex00/*.c
+!ex00/Doxyfile
+!ex00/Makefile
 !*_basic/*.c
 !*_distributed/*.c
 

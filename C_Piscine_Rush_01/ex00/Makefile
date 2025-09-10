@@ -25,6 +25,10 @@ fclean: clean
 
 re: fclean all
 
+docs:
+	doxygen Doxyfile
+	@echo "Docs have been generated in docs/html/index.html"
+
 exit: $(TARGET)
 	@printf "${BRIGHT_RED_COLOR}EXIT_CODE__ERROR__NO_CLUES_STRING${RESET_COLOR}\n"
 	@echo "implemented exit code: 1"
