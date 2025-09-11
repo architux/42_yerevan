@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 17:59:04 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/08 19:26:05 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:22:10 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n);
 
 int	main(void)
 {
-	char	src[7] = "123456";
-	unsigned int	nums[4] = {0, 3, 6, 18};
+	char			src[] = "123456";
+	unsigned int	nums[] = {0, 3, 6, 18};
 	unsigned int	nums_size = sizeof(nums) / sizeof(nums[0]);
 	unsigned int	i = 0;
 
 	printf("src: %s\n\n", src);
 	while (i < nums_size)
 	{
-		char	dest_longer_ft[19] = "xxxxxxxxxxxxxxxxxx";
-		char	dest_longer[19] = "xxxxxxxxxxxxxxxxxx";
-		char	dest_equal_fs[7] = "xxxxxx";
-		char	dest_equal[7] = "xxxxxx";
-		char	dest_shorter_fs[4] = "xxx";
-		char	dest_shorter[4] = "xxx";
+		char	dest_longer_ft[] = "xxxxxxxxxxxxxxxxxx";
+		char	dest_longer[] = "xxxxxxxxxxxxxxxxxx";
+		char	dest_equal_fs[] = "xxxxxx";
+		char	dest_equal[] = "xxxxxx";
+		char	dest_shorter_fs[] = "xxx";
+		char	dest_shorter[] = "xxx";
 
 		printf("n: %i\n", nums[i]);
 

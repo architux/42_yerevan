@@ -6,19 +6,13 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 17:44:29 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/08 19:57:18 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/11 17:36:30 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_char_is_numeric(char c)
 {
-	int	is_numeric;
-
-	if (c >= '0' && c <= '9')
-		is_numeric = 1;
-	else
-		is_numeric = 0;
-	return (is_numeric);
+	return (c >= '0' && c <= '9');
 }
 
 int	ft_str_is_numeric(char *str)

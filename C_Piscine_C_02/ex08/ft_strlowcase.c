@@ -6,19 +6,13 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 20:36:31 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/08 19:56:06 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/11 17:32:31 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_char_is_upper_alpha(char c)
 {
-	int	is_uppercase;
-
-	if (c >= 'A' && c <= 'Z')
-		is_uppercase = 1;
-	else
-		is_uppercase = 0;
-	return (is_uppercase);
+	return (c >= 'A' && c <= 'Z');
 }
 
 char	*ft_strlowcase(char *str)

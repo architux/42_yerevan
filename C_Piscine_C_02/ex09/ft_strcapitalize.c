@@ -6,41 +6,23 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 20:41:11 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/08 20:16:59 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/11 17:31:23 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_char_is_lower_alpha(char c)
 {
-	int	is_lowercase;
-
-	if (c >= 'a' && c <= 'z')
-		is_lowercase = 1;
-	else
-		is_lowercase = 0;
-	return (is_lowercase);
+	return (c >= 'a' && c <= 'z');
 }
 
 int	ft_char_is_upper_alpha(char c)
 {
-	int	is_uppercase;
-
-	if (c >= 'A' && c <= 'Z')
-		is_uppercase = 1;
-	else
-		is_uppercase = 0;
-	return (is_uppercase);
+	return (c >= 'A' && c <= 'Z');
 }
 
 int	ft_char_is_numeric(char c)
 {
-	int	is_numeric;
-
-	if (c >= '0' && c <= '9')
-		is_numeric = 1;
-	else
-		is_numeric = 0;
-	return (is_numeric);
+	return (c >= '0' && c <= '9');
 }
 
 int	ft_char_is_alphanumeric(char c)

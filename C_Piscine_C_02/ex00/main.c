@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 16:34:22 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/08 18:20:00 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:21:47 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strcpy(char *dest, char *src);
 
 int	main(void)
 {
-	char	dest_longer_ft[19] = "xxxxxxxxxxxxxxxxxx";
-	char	dest_longer[19] = "xxxxxxxxxxxxxxxxxx";
-	char	dest_equal_fs[7] = "xxxxxx";
-	char	dest_equal[7] = "xxxxxx";
-	char	dest_shorter_fs[4] = "xxx";
-	char	dest_shorter[4] = "xxx";
-	char	src[7] = "123456";
+	char	src[] = "123456";
+	char	dest_longer_ft[] = "xxxxxxxxxxxxxxxxxx";
+	char	dest_longer[] = "xxxxxxxxxxxxxxxxxx";
+	char	dest_equal_fs[] = "xxxxxx";
+	char	dest_equal[] = "xxxxxx";
+	char	dest_shorter_fs[] = "xxx";
+	char	dest_shorter[] = "xxx";
 
 	printf("src: %s\n", src);
 

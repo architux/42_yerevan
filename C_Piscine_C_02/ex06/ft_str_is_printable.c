@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 19:09:27 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/09 18:28:03 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/11 17:33:51 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@ int	ft_char_is_printable(char c)
 {
 	int	printable_min_code_point;
 	int	printable_max_code_point;
-	int	is_printable;
 
 	printable_min_code_point = 32;
 	printable_max_code_point = 126;
-	if (c >= printable_min_code_point && c <= printable_max_code_point)
-		is_printable = 1;
-	else
-		is_printable = 0;
-	return (is_printable);
+	return (c >= printable_min_code_point && c <= printable_max_code_point);
 }
 
 int	ft_str_is_printable(char *str)
