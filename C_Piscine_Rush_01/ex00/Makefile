@@ -89,7 +89,7 @@ test_exit_codes: $(TARGET)
 	@echo "clues: 16"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
 
-test: test_sym
+test: test_sym_squares
 
 test_sym_squares: $(TARGET)
 	@echo "=== Running 4x4 symmetric test case ==="
