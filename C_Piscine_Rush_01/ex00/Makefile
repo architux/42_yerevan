@@ -32,6 +32,8 @@ docs:
 test_exit_codes: $(TARGET)
 	@printf "${BRIGHT_RED_COLOR}EXIT_CODE__ERROR__NO_CLUES_STRING${RESET_COLOR}\n"
 	@echo "implemented exit code: 1"
+	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01${RESET_COLOR}\n"
 	@echo "clues: -"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
@@ -39,22 +41,32 @@ test_exit_codes: $(TARGET)
 
 	@printf "${BRIGHT_RED_COLOR}EXIT_CODE__ERROR__NO_CLUES_TO_PARSE${RESET_COLOR}\n"
 	@echo "implemented exit code: 2"
+	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01 \" \"${RESET_COLOR}\n"
 	@echo "clues: 0"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) " " ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
 	@echo ""
 
+	@printf "test command: ${YELLOW_COLOR}./rush01 \"A B C D D C C C A B C D D C C C\"${RESET_COLOR}\n"
+	@echo "clues: 0"
+	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "A B C D D C C C A B C D D C C C" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
+	@echo ""
+
 	@printf "${BRIGHT_RED_COLOR}EXIT_CODE__ERROR__INVALID_CLUES_COUNT${RESET_COLOR}\n"
 	@echo "implemented exit code: 3"
 	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01 \"1 2 3 4 3\"${RESET_COLOR}\n"
 	@echo "clues: 5"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "1 2 3 4 3" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
 	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01 \"4 3 2 1 1 2 2 2 4 3 2 1\"${RESET_COLOR}\n"
 	@echo "clues: 12"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "4 3 2 1 1 2 2 2 4 3 2 1" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
 	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01 \"4 3 2 1 1 2 2 2 4 3 4 3 2 1 1 2 2 2 4 3 4 3 2 1 1 2 2 2 4 3 4 3 2 1 1 2 2 2 4 3\"${RESET_COLOR}\n"
 	@echo "clues: 40"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "4 3 2 1 1 2 2 2 4 3 4 3 2 1 1 2 2 2 4 3 4 3 2 1 1 2 2 2 4 3 4 3 2 1 1 2 2 2 4 3" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
@@ -62,13 +74,17 @@ test_exit_codes: $(TARGET)
 
 	@printf "${BRIGHT_RED_COLOR}EXIT_CODE__ERROR__NO_SOLUTION_FOUND${RESET_COLOR}\n"
 	@echo "implemented exit code: 4"
+	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01 \"1 2 2 2 4 3 2 1 4 3 2 1 1 2 2 2\"${RESET_COLOR}\n"
 	@echo "clues: 16"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "1 2 2 2 4 3 2 1 4 3 2 1 1 2 2 2" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
 	@echo ""
 
-	@printf "${BRIGHT_GREEN_COLOR}EXIT_CODE__SUCCESS${RESET_COLOR}"
+	@printf "${BRIGHT_GREEN_COLOR}EXIT_CODE__SUCCESS${RESET_COLOR}\n"
 	@echo "implemented exit code: 0"
+	@echo ""
+
 	@printf "test command: ${YELLOW_COLOR}./rush01 \"4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2\"${RESET_COLOR}\n"
 	@echo "clues: 16"
 	@printf "output: \n${YELLOW_COLOR}" ; ./$(TARGET) "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" ; printf "${RESET_COLOR}returned exit code: $$?\n" || true
