@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
+/*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/07 19:22:18 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/07 23:04:28 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/13 01:52:02 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 
 int	no_clues_string_error(int argc)
 {
-	if (argc < VALID_ARGC_COUNT)
+	if (argc != VALID_ARGC_COUNT)
 	{
 		write(STDERR_FILENO, ERROR_TEXT, ERROR_TEXT_SIZE);
 		return (EXIT_CODE__ERROR__NO_CLUES_STRING);
