@@ -1,4 +1,4 @@
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = main.c init.c errors.c solver.c check.c print.c
