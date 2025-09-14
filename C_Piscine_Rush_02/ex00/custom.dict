@@ -1,0 +1,46 @@
+0: nada
+1: unity
+ 2 : pair pair	
+3: trio
+4: quad
+5: quint
+6: hex
+7: sept
+8: octo
+9: nova
+10: decade
+11: elevenish
+12: dozen
+
+13: lucky	
+14: fortnight
+   15: half-moon
+16: sweet-sixteen
+17: hept-dec
+18: near-twenty
+19: teen-max
+
+20: score  
+30: thrice-ten
+	40: forty ish
+
+50: half-century
+60: sixtopia
+70: lucky-seventy
+80: eightyfold
+90: ninetyish
+
+100: hundo
+1000: kilo
+1000000: mega
+1000000000: giga
+1000000000000: tera
+1000000000000000: quadra
+1000000000000000000: quinti
+1000000000000000000000: sexti
+1000000000000000000000000: septi
+1000000000000000000000000000: octi
+1000000000000000000000000000000: noni
+1000000000000000000000000000000000: deci
+1000000000000000000000000000000000000: undeci
+1000000000000000000000000000000000000000000: tredeci
