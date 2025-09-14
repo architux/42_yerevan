@@ -1,8 +1,0 @@
-var validation_8c =
-[
-    [ "check_number_format", "validation_8c.html#a3e980cd2c1e6948e57756f0475d64698", null ],
-    [ "is_digit", "validation_8c.html#afcb8cf4ba18ad43ea5c643b027cf0170", null ],
-    [ "strip_leading_zeros", "validation_8c.html#a85170ea7fb559677633e0bc85bc56863", null ],
-    [ "trim_whitespace", "validation_8c.html#abff58decf4919821527339856b7d8960", null ],
-    [ "validate_number", "validation_8c.html#acdce00e90ecf2feb9ff24fa3d39b802a", null ]
-];
