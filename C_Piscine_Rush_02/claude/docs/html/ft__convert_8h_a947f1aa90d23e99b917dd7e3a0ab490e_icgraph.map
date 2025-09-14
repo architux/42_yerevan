@@ -1,0 +1,14 @@
+<map id="free_mappings" name="free_mappings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="630,56,736,83"/>
+<area shape="rect" id="Node000002" href="$dict__parser_8c.html#ac8c052382b5551373a06b30013b5ff4f" title=" " alt="" coords="465,5,582,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="623,53,567,35,569,30,625,48"/>
+<area shape="rect" id="Node000003" href="$process_8c.html#a5b78dd11ed0af8a3709ebbe817eea325" title=" " alt="" coords="103,56,240,83"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="615,83,465,99,376,102,288,97,224,86,225,81,288,92,376,97,464,94,614,78"/>
+<area shape="rect" id="Node000005" href="$dict__validation_8c.html#a3bcb38196dd6bd633a72e29431defb46" title=" " alt="" coords="288,56,417,83"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="614,72,418,72,418,67,614,67"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="450,27,288,47,231,58,230,53,288,41,449,22"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="462,40,401,58,399,53,461,34"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="272,72,240,72,240,67,272,67"/>
+</map>

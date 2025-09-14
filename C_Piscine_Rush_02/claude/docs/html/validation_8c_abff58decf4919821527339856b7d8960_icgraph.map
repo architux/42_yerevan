@@ -1,0 +1,15 @@
+<map id="trim_whitespace" name="trim_whitespace">
+<area shape="rect" id="Node000001" title=" " alt="" coords="814,17,930,44"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,17,55,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="798,25,671,14,525,8,351,8,266,11,182,17,55,30,55,25,181,11,265,5,351,3,525,3,671,8,798,20"/>
+<area shape="rect" id="Node000003" href="$dict__parser_8c.html#a5e0063cd44034d5e48a221f3f5890c3a" title=" " alt="" coords="630,43,766,69"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="799,44,767,49,766,43,798,39"/>
+<area shape="rect" id="Node000004" href="$dict__parser_8c.html#ac8c052382b5551373a06b30013b5ff4f" title=" " alt="" coords="465,43,582,69"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="614,59,582,59,582,53,614,53"/>
+<area shape="rect" id="Node000005" href="$process_8c.html#a5b78dd11ed0af8a3709ebbe817eea325" title=" " alt="" coords="103,43,240,69"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="450,59,240,59,240,53,450,53"/>
+<area shape="rect" id="Node000006" href="$dict__validation_8c.html#a3bcb38196dd6bd633a72e29431defb46" title=" " alt="" coords="288,93,417,120"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="462,77,401,95,399,90,461,72"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="87,44,54,38,55,32,88,38"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="287,91,221,72,223,67,288,86"/>
+</map>

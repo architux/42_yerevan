@@ -1,0 +1,71 @@
+\doxysection{ft\+\_\+convert.\+h}
+\hypertarget{ft__convert_8h_source}{}\label{ft__convert_8h_source}\mbox{\hyperlink{ft__convert_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FT\_CONVERT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#\ define\ FT\_CONVERT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structs__mapping}{s\_mapping}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ *\mbox{\hyperlink{structs__mapping_adbf3ee90f9fb756c310150d207fde0f0}{key}};}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ *\mbox{\hyperlink{structs__mapping_a55ea8948ddcfab3e0719e74121c29576}{value}};}
+\DoxyCodeLine{00008\ \}\ \ \ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ main.c\ */}}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a7a9fe4f1210008b95e1b118945eb31ba}{ft\_strlen}}(\textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_abd118f33a5a0fe00b6cbbfb0eeae25a5}{ft\_strcmp}}(\textcolor{keywordtype}{char}\ *s1,\ \textcolor{keywordtype}{char}\ *s2);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_aedbe09c9d81390246e7bed1b0c630a21}{ft\_strdup}}(\textcolor{keywordtype}{char}\ *src);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a796199e8284313197782cb327e5cdbcb}{handle\_error}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{/*\ validation.c\ */}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_abff58decf4919821527339856b7d8960}{trim\_whitespace}}(\textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_afcb8cf4ba18ad43ea5c643b027cf0170}{is\_digit}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a85170ea7fb559677633e0bc85bc56863}{strip\_leading\_zeros}}(\textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a3e980cd2c1e6948e57756f0475d64698}{check\_number\_format}}(\textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_acdce00e90ecf2feb9ff24fa3d39b802a}{validate\_number}}(\textcolor{keywordtype}{char}\ **number);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*\ dict\_parser.c\ */}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_ac2dcf9374b0c21b6bbdc7214636ae1ec}{read\_file}}(\textcolor{keywordtype}{char}\ *path,\ \textcolor{keywordtype}{char}\ **content);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a36d2da198013a616a7a0f98054824b45}{count\_lines}}(\textcolor{keywordtype}{char}\ *content);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ **\mbox{\hyperlink{ft__convert_8h_acea8426fa1b2a88c0d41d70854a361b1}{split\_lines}}(\textcolor{keywordtype}{char}\ *content,\ \textcolor{keywordtype}{int}\ *line\_count);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a5e0063cd44034d5e48a221f3f5890c3a}{parse\_mapping\_line}}(\textcolor{keywordtype}{char}\ *line,\ \textcolor{keywordtype}{char}\ **key,\ \textcolor{keywordtype}{char}\ **value);}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ \ *\mbox{\hyperlink{ft__convert_8h_ac8c052382b5551373a06b30013b5ff4f}{parse\_dictionary}}(\textcolor{keywordtype}{char}\ *path,\ \textcolor{keywordtype}{int}\ *count);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/*\ dict\_validation.c\ */}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a086f2e1d45303f2ae2807884d121feac}{validate\_dict\_key}}(\textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a13f8040bd2b69e2e88c5b818b1a18079}{check\_duplicate\_keys}}(\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a66282b0e52ae8e9cc350d490592f3165}{check\_required\_mappings}}(\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *dict,\ \textcolor{keywordtype}{int}\ dict\_count,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *req,\ \textcolor{keywordtype}{int}\ req\_count);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a3bcb38196dd6bd633a72e29431defb46}{validate\_dictionary}}(\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a58e73a2efb125a4b0f774511fd61c41d}{can\_convert\_number}}(\textcolor{keywordtype}{char}\ *number,\ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{/*\ conversion.c\ */}}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a4da89996f6f5a45fbb646c39ef3e6cb2}{find\_mapping}}(\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count,\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a44937429417d9bc4152188c8a78ef10c}{convert\_hundreds}}(\textcolor{keywordtype}{int}\ h,\ \textcolor{keywordtype}{int}\ t,\ \textcolor{keywordtype}{int}\ o,\ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a82a1feca70c979ed51364bb42306d54f}{convert\_triplet}}(\textcolor{keywordtype}{char}\ *triplet,\ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_aca6f8fd591fbde2a4d2c1e1833c827b5}{find\_scale\_name}}(\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count,\ \textcolor{keywordtype}{int}\ group\_index);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a57f397d82b353b943410df86212e704d}{convert\_number}}(\textcolor{keywordtype}{char}\ *number,\ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{/*\ helpers.c\ */}}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a41989b306da817556af871fb6d5b72ff}{extract\_substring}}(\textcolor{keywordtype}{char}\ *str,\ \textcolor{keywordtype}{int}\ start,\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_ad3e9fd83e20283e54a5adc9f5a9ea039}{is\_empty\_line}}(\textcolor{keywordtype}{char}\ *line);}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a3222789b62d41bef34bd5b3f1c9de0dc}{append\_with\_space}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keywordtype}{char}\ *src);}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a6277098847a9d44fa9582093bf5328a0}{pad\_number}}(\textcolor{keywordtype}{char}\ *number);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a96e81da608bac4cd34a4c93a1131e57c}{extract\_triplet}}(\textcolor{keywordtype}{char}\ *padded,\ \textcolor{keywordtype}{int}\ group\_index,\ \textcolor{keywordtype}{char}\ *triplet);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ helpers2.c\ */}}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_af104d6d759ade7d23177d848cf37e915}{convert\_tens\_ones}}(\textcolor{keywordtype}{int}\ t,\ \textcolor{keywordtype}{int}\ o,\ \textcolor{keywordtype}{char}\ *result,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_ad94a7dfa44fa7ee2f463af0b456d19aa}{process\_triplet}}(\textcolor{keywordtype}{char}\ *triplet,\ \textcolor{keywordtype}{int}\ group\_index,\ \textcolor{keywordtype}{char}\ *result,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a25eedb6bb1efc6471fdbad00664ccf3f}{free\_lines}}(\textcolor{keywordtype}{char}\ **lines,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a947f1aa90d23e99b917dd7e3a0ab490e}{free\_mappings}}(\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\_mapping}}\ *mappings,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{/*\ process.c\ */}}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a752cf5e9b451fa0ab9dd5d1f596d866a}{get\_last\_error}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{ft__convert_8h_a7b73ebc2584d27b83a7cd097c0926418}{set\_last\_error}}(\textcolor{keywordtype}{int}\ error);}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ *\mbox{\hyperlink{ft__convert_8h_a5b78dd11ed0af8a3709ebbe817eea325}{process\_conversion}}(\textcolor{keywordtype}{char}\ *dict\_path,\ \textcolor{keywordtype}{char}\ *number);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

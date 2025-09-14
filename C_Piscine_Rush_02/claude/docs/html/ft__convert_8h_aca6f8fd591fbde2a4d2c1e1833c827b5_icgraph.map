@@ -1,0 +1,14 @@
+<map id="find_scale_name" name="find_scale_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="633,31,752,57"/>
+<area shape="rect" id="Node000002" href="$dict__validation_8c.html#a58e73a2efb125a4b0f774511fd61c41d" title=" " alt="" coords="288,5,430,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="617,41,431,27,431,21,617,36"/>
+<area shape="rect" id="Node000005" href="$helpers2_8c.html#ad94a7dfa44fa7ee2f463af0b456d19aa" title=" " alt="" coords="478,56,585,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="617,58,585,64,585,58,617,53"/>
+<area shape="rect" id="Node000003" href="$process_8c.html#a5b78dd11ed0af8a3709ebbe817eea325" title=" " alt="" coords="103,31,240,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,33,241,37,240,32,272,28"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="rect" id="Node000006" href="$conversion_8c.html#a57f397d82b353b943410df86212e704d" title=" " alt="" coords="302,56,416,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="463,72,416,72,416,67,463,67"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="286,62,240,56,241,51,287,57"/>
+</map>
