@@ -6,13 +6,13 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 20:40:47 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/09 22:08:58 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/15 20:48:16 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (*s1 && *s1 == *s2 && n > 0)
+	while (n > 0 && *s1 && *s1 == *s2)
 	{
 		s1++;
 		s2++;
@@ -21,5 +21,5 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	if (n == 0)
 		return (0);
 	else
-		return (*s1 - *s2);
+		return ((unsigned char)*s1 - (unsigned char)*s2);
 }

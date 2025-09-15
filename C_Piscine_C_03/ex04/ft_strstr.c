@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 21:03:49 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/12 21:15:19 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/15 22:18:24 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strstr(char *str, char *to_find)
 	char	*needle;
 
 	if (!*to_find)
-		return (char *)str;
+		return (str);
 	while (*str)
 	{
 		haystack = str;
@@ -29,8 +29,8 @@ char	*ft_strstr(char *str, char *to_find)
 			needle++;
 		}
 		if (!*needle)
-			return (char *)str;
+			return (str);
 		str++;
 	}
-	return NULL;
+	return (NULL);
 }

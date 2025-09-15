@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 20:07:24 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/09 20:15:46 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/15 21:03:59 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_strcmp(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

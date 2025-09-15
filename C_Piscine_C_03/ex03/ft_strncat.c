@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 22:16:01 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/15 21:23:48 by mvasilev         ###   ########.fr       */
+/*   Created: 2025/09/12 20:42:56 by mvasilev          #+#    #+#             */
+/*   Updated: 2025/09/15 21:35:21 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcat(char *dest, char *src);
-
-int	main(void)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char	str_src[] = "XYZ";
-	char	str_dest[] = "ABC";
+	char	*dest_initial_pointer;
 
-	printf("        str_src: $%s$\n", str_src);
-	printf("str_dest before: $%s$\n", str_dest);
-	ft_strcat(str_dest, str_src);
-	printf(" str_dest after: $%s$\n", str_dest);
-	return (0);
+	dest_initial_pointer = dest;
+	while (*dest)
+		dest++;
+	while (nb > 0 && *src)
+	{
+		*dest++ = *src++;
+		nb--;
+	}
+	*dest = '\0';
+	return (dest_initial_pointer);
 }
