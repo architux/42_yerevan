@@ -3,37 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasilev <mvasilev@42yerevan.am>           +#+  +:+       +#+        */
+/*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 04:28:27 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/05 04:32:49 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/15 23:10:09 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "../../.tests/test.h"
 
 void	ft_putchar(char c);
-
 void	ft_putnbr(int nb);
+
+void	test(int number)
+{
+	printf("%i: $%s", number, COLOR_YELLOW);
+	fflush(stdout);
+	ft_putnbr(number);
+	printf("%s$\n", COLOR_RESET);
+}
 
 int	main(void)
 {
-	int	number;
-
-	number = -451;
-	ft_putnbr(number);
-	ft_putchar('\n');
-	number = -42;
-	ft_putnbr(number);
-	ft_putchar('\n');
-	number = 0;
-	ft_putnbr(number);
-	ft_putchar('\n');
-	number = 42;
-	ft_putnbr(number);
-	ft_putchar('\n');
-	number = 451;
-	ft_putnbr(number);
-	ft_putchar('\n');
+	test(-451);
+	test(-42);
+	test(0);
+	test(42);
+	test(451);
 	return (0);
 }

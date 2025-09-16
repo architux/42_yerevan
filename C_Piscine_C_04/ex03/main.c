@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/12 21:30:34 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/15 23:06:56 by mvasilev         ###   ########.fr       */
+/*   Created: 2025/09/15 23:40:54 by mvasilev          #+#    #+#             */
+/*   Updated: 2025/09/16 20:45:44 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "../../.tests/test.h"
 
-void	ft_putchar(char c)
+int	ft_atoi(char *str);
+
+void	test(char *str)
 {
-	write(STDOUT_FILENO, &c, 1);
+	printf("ft_atoi: %i\n", ft_atoi(str));
+	printf("   atoi: %i\n", atoi(str));
+	printf("\n");
 }
 
-void	ft_putnbr(int nb)
+int	main(void)
 {
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar('0' + (nb % 10));
+	test(" \n\v---+--+1234ab567");
+	test("+123z4ab567");
+	return (0);
 }
