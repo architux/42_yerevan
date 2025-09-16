@@ -1,0 +1,132 @@
+\doxysection{dict\+\_\+parser.\+c File Reference}
+\hypertarget{dict__parser_8c}{}\label{dict__parser_8c}\index{dict\_parser.c@{dict\_parser.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}ft\+\_\+convert.\+h"{}}\newline
+Include dependency graph for dict\+\_\+parser.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{dict__parser_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{dict__parser_8c_a36d2da198013a616a7a0f98054824b45}{count\+\_\+lines}} (char \texorpdfstring{$\ast$}{*}content)
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dict__parser_8c_a1c5b0b3fafa4233e41858d810a4bd1cd}{split\+\_\+lines}} (char \texorpdfstring{$\ast$}{*}content, int \texorpdfstring{$\ast$}{*}line\+\_\+count, int i, int j)
+\item 
+int \mbox{\hyperlink{dict__parser_8c_a5e0063cd44034d5e48a221f3f5890c3a}{parse\+\_\+mapping\+\_\+line}} (char \texorpdfstring{$\ast$}{*}line, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}key, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}value)
+\item 
+int \mbox{\hyperlink{dict__parser_8c_adcd1d9c253034ca41f33fcdf24ddd9fd}{free\+\_\+stuff}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}lines, int line\+\_\+count, \mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*}mappings, int \texorpdfstring{$\ast$}{*}count)
+\item 
+\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dict__parser_8c_ac8c052382b5551373a06b30013b5ff4f}{parse\+\_\+dictionary}} (char \texorpdfstring{$\ast$}{*}path, int \texorpdfstring{$\ast$}{*}count)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{dict__parser_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{dict__parser_8c_a36d2da198013a616a7a0f98054824b45}\index{dict\_parser.c@{dict\_parser.c}!count\_lines@{count\_lines}}
+\index{count\_lines@{count\_lines}!dict\_parser.c@{dict\_parser.c}}
+\doxysubsubsection{\texorpdfstring{count\_lines()}{count\_lines()}}
+{\footnotesize\ttfamily \label{dict__parser_8c_a36d2da198013a616a7a0f98054824b45} 
+int count\+\_\+lines (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{content}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_a36d2da198013a616a7a0f98054824b45_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dict__parser_8c_adcd1d9c253034ca41f33fcdf24ddd9fd}\index{dict\_parser.c@{dict\_parser.c}!free\_stuff@{free\_stuff}}
+\index{free\_stuff@{free\_stuff}!dict\_parser.c@{dict\_parser.c}}
+\doxysubsubsection{\texorpdfstring{free\_stuff()}{free\_stuff()}}
+{\footnotesize\ttfamily \label{dict__parser_8c_adcd1d9c253034ca41f33fcdf24ddd9fd} 
+int free\+\_\+stuff (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{lines}{, }\item[{int}]{line\+\_\+count}{, }\item[{\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*}}]{mappings}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{count}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_adcd1d9c253034ca41f33fcdf24ddd9fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_adcd1d9c253034ca41f33fcdf24ddd9fd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dict__parser_8c_ac8c052382b5551373a06b30013b5ff4f}\index{dict\_parser.c@{dict\_parser.c}!parse\_dictionary@{parse\_dictionary}}
+\index{parse\_dictionary@{parse\_dictionary}!dict\_parser.c@{dict\_parser.c}}
+\doxysubsubsection{\texorpdfstring{parse\_dictionary()}{parse\_dictionary()}}
+{\footnotesize\ttfamily \label{dict__parser_8c_ac8c052382b5551373a06b30013b5ff4f} 
+\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*} parse\+\_\+dictionary (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{count}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_ac8c052382b5551373a06b30013b5ff4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_ac8c052382b5551373a06b30013b5ff4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dict__parser_8c_a5e0063cd44034d5e48a221f3f5890c3a}\index{dict\_parser.c@{dict\_parser.c}!parse\_mapping\_line@{parse\_mapping\_line}}
+\index{parse\_mapping\_line@{parse\_mapping\_line}!dict\_parser.c@{dict\_parser.c}}
+\doxysubsubsection{\texorpdfstring{parse\_mapping\_line()}{parse\_mapping\_line()}}
+{\footnotesize\ttfamily \label{dict__parser_8c_a5e0063cd44034d5e48a221f3f5890c3a} 
+int parse\+\_\+mapping\+\_\+line (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{line}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{key}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_a5e0063cd44034d5e48a221f3f5890c3a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_a5e0063cd44034d5e48a221f3f5890c3a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dict__parser_8c_a1c5b0b3fafa4233e41858d810a4bd1cd}\index{dict\_parser.c@{dict\_parser.c}!split\_lines@{split\_lines}}
+\index{split\_lines@{split\_lines}!dict\_parser.c@{dict\_parser.c}}
+\doxysubsubsection{\texorpdfstring{split\_lines()}{split\_lines()}}
+{\footnotesize\ttfamily \label{dict__parser_8c_a1c5b0b3fafa4233e41858d810a4bd1cd} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} split\+\_\+lines (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{content}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{line\+\_\+count}{, }\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{dict__parser_8c_a1c5b0b3fafa4233e41858d810a4bd1cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dict__parser_8c_a1c5b0b3fafa4233e41858d810a4bd1cd_icgraph}
+\end{center}
+\end{figure}

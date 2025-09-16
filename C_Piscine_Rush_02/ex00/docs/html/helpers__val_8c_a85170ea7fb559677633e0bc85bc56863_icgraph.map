@@ -1,0 +1,9 @@
+<map id="strip_leading_zeros" name="strip_leading_zeros">
+<area shape="rect" id="Node000001" title=" " alt="" coords="400,5,534,32"/>
+<area shape="rect" id="Node000002" href="$validation_8c.html#acdce00e90ecf2feb9ff24fa3d39b802a" title=" " alt="" coords="236,5,352,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,21,353,21,353,16,385,16"/>
+<area shape="rect" id="Node000003" href="$process_8c.html#a6b8653e5d6b8c2bc215b0f6296a57202" title=" " alt="" coords="103,5,188,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,21,188,21,188,16,220,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

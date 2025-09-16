@@ -1,0 +1,16 @@
+<map id="find_scale_name" name="find_scale_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="766,31,885,57"/>
+<area shape="rect" id="Node000002" href="$dict__validation_8c.html#a58e73a2efb125a4b0f774511fd61c41d" title=" " alt="" coords="421,5,564,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="750,41,564,27,564,21,751,36"/>
+<area shape="rect" id="Node000006" href="$helpers2_8c.html#aa882d1da3eeeeb1db44316bf3994cef8" title=" " alt="" coords="612,56,718,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="751,58,719,64,718,58,750,53"/>
+<area shape="rect" id="Node000003" href="$process_8c.html#a5b78dd11ed0af8a3709ebbe817eea325" title=" " alt="" coords="236,31,373,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="406,33,374,37,373,32,406,28"/>
+<area shape="rect" id="Node000004" href="$process_8c.html#a6b8653e5d6b8c2bc215b0f6296a57202" title=" " alt="" coords="103,31,188,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="220,47,188,47,188,41,220,41"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="rect" id="Node000007" href="$conversion_8c.html#a57f397d82b353b943410df86212e704d" title=" " alt="" coords="435,56,550,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="596,72,550,72,550,67,596,67"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="420,62,373,56,374,51,421,57"/>
+</map>

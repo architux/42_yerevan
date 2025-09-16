@@ -1,0 +1,134 @@
+\doxysection{helpers\+\_\+dict.\+c File Reference}
+\hypertarget{helpers__dict_8c}{}\label{helpers__dict_8c}\index{helpers\_dict.c@{helpers\_dict.c}}
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}ft\+\_\+convert.\+h"{}}\newline
+Include dependency graph for helpers\+\_\+dict.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{helpers__dict_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{helpers__dict_8c_a68aa1ccec164997eebbb74f7d751555c}{read\+\_\+file}} (char \texorpdfstring{$\ast$}{*}path, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}content, int total)
+\item 
+int \mbox{\hyperlink{helpers__dict_8c_a086f2e1d45303f2ae2807884d121feac}{validate\+\_\+dict\+\_\+key}} (char \texorpdfstring{$\ast$}{*}key)
+\item 
+int \mbox{\hyperlink{helpers__dict_8c_aec9289b69b670cc971a6c21f71ae0497}{validate\+\_\+dict\+\_\+keys}} (\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*}mappings, int count)
+\item 
+int \mbox{\hyperlink{helpers__dict_8c_afaea0edcdc4d41af28ab4c6ecadf91a2}{validate\+\_\+acceptable\+\_\+key}} (char \texorpdfstring{$\ast$}{*}s)
+\item 
+int \mbox{\hyperlink{helpers__dict_8c_ad883df9e614e2d03dea3356b891e744e}{check\+\_\+acceptable\+\_\+keys}} (\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*}mappings, int count)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{helpers__dict_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{helpers__dict_8c_ad883df9e614e2d03dea3356b891e744e}\index{helpers\_dict.c@{helpers\_dict.c}!check\_acceptable\_keys@{check\_acceptable\_keys}}
+\index{check\_acceptable\_keys@{check\_acceptable\_keys}!helpers\_dict.c@{helpers\_dict.c}}
+\doxysubsubsection{\texorpdfstring{check\_acceptable\_keys()}{check\_acceptable\_keys()}}
+{\footnotesize\ttfamily \label{helpers__dict_8c_ad883df9e614e2d03dea3356b891e744e} 
+int check\+\_\+acceptable\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*}}]{mappings}{, }\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_ad883df9e614e2d03dea3356b891e744e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_ad883df9e614e2d03dea3356b891e744e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{helpers__dict_8c_a68aa1ccec164997eebbb74f7d751555c}\index{helpers\_dict.c@{helpers\_dict.c}!read\_file@{read\_file}}
+\index{read\_file@{read\_file}!helpers\_dict.c@{helpers\_dict.c}}
+\doxysubsubsection{\texorpdfstring{read\_file()}{read\_file()}}
+{\footnotesize\ttfamily \label{helpers__dict_8c_a68aa1ccec164997eebbb74f7d751555c} 
+int read\+\_\+file (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{content}{, }\item[{int}]{total}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_a68aa1ccec164997eebbb74f7d751555c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{helpers__dict_8c_afaea0edcdc4d41af28ab4c6ecadf91a2}\index{helpers\_dict.c@{helpers\_dict.c}!validate\_acceptable\_key@{validate\_acceptable\_key}}
+\index{validate\_acceptable\_key@{validate\_acceptable\_key}!helpers\_dict.c@{helpers\_dict.c}}
+\doxysubsubsection{\texorpdfstring{validate\_acceptable\_key()}{validate\_acceptable\_key()}}
+{\footnotesize\ttfamily \label{helpers__dict_8c_afaea0edcdc4d41af28ab4c6ecadf91a2} 
+int validate\+\_\+acceptable\+\_\+key (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{helpers__dict_8c_afaea0edcdc4d41af28ab4c6ecadf91a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_afaea0edcdc4d41af28ab4c6ecadf91a2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{helpers__dict_8c_a086f2e1d45303f2ae2807884d121feac}\index{helpers\_dict.c@{helpers\_dict.c}!validate\_dict\_key@{validate\_dict\_key}}
+\index{validate\_dict\_key@{validate\_dict\_key}!helpers\_dict.c@{helpers\_dict.c}}
+\doxysubsubsection{\texorpdfstring{validate\_dict\_key()}{validate\_dict\_key()}}
+{\footnotesize\ttfamily \label{helpers__dict_8c_a086f2e1d45303f2ae2807884d121feac} 
+int validate\+\_\+dict\+\_\+key (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{key}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{helpers__dict_8c_a086f2e1d45303f2ae2807884d121feac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_a086f2e1d45303f2ae2807884d121feac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{helpers__dict_8c_aec9289b69b670cc971a6c21f71ae0497}\index{helpers\_dict.c@{helpers\_dict.c}!validate\_dict\_keys@{validate\_dict\_keys}}
+\index{validate\_dict\_keys@{validate\_dict\_keys}!helpers\_dict.c@{helpers\_dict.c}}
+\doxysubsubsection{\texorpdfstring{validate\_dict\_keys()}{validate\_dict\_keys()}}
+{\footnotesize\ttfamily \label{helpers__dict_8c_aec9289b69b670cc971a6c21f71ae0497} 
+int validate\+\_\+dict\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ft__convert_8h_a9cff9b010df8a7f3492fa6e068071cae}{t\+\_\+mapping}} \texorpdfstring{$\ast$}{*}}]{mappings}{, }\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_aec9289b69b670cc971a6c21f71ae0497_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers__dict_8c_aec9289b69b670cc971a6c21f71ae0497_icgraph}
+\end{center}
+\end{figure}

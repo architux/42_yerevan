@@ -13,8 +13,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.c errors.c validation.c dict_parser.c dict_validation.c \
-		conversion.c process.c helpers.c helpers2.c helpers_dict.c helpers_val.c
+SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
 TARGET = rush-02

@@ -1,0 +1,13 @@
+<map id="convert_tens_ones" name="convert_tens_ones">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,137,57"/>
+<area shape="rect" id="Node000002" href="$helpers2_8c.html#a5496f04c16dcdf7089447f61a18e6032" title=" " alt="" coords="185,31,267,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,41,169,41,169,47,137,47"/>
+<area shape="rect" id="Node000003" href="$helpers_8c.html#a3222789b62d41bef34bd5b3f1c9de0dc" title=" " alt="" coords="315,5,451,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,35,300,29,300,35,268,40"/>
+<area shape="rect" id="Node000005" href="$conversion_8c.html#a4da89996f6f5a45fbb646c39ef3e6cb2" title=" " alt="" coords="334,56,432,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="268,48,319,56,318,62,267,53"/>
+<area shape="rect" id="Node000004" href="$process_8c.html#a7a9fe4f1210008b95e1b118945eb31ba" title=" " alt="" coords="503,5,572,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="452,16,488,16,488,21,452,21"/>
+<area shape="rect" id="Node000006" href="$process_8c.html#abd118f33a5a0fe00b6cbbfb0eeae25a5" title=" " alt="" coords="499,56,576,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="433,67,484,67,484,72,433,72"/>
+</map>

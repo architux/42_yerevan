@@ -1,0 +1,20 @@
+<map id="free_stuff" name="free_stuff">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,82,108"/>
+<area shape="rect" id="Node000002" href="$helpers2_8c.html#a25eedb6bb1efc6471fdbad00664ccf3f" title=" " alt="" coords="159,5,236,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,78,128,42,143,35,146,40,131,46,67,83"/>
+<area shape="rect" id="Node000003" href="$helpers2_8c.html#a947f1aa90d23e99b917dd7e3a0ab490e" title=" " alt="" coords="145,56,251,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,86,129,78,130,83,83,91"/>
+<area shape="rect" id="Node000004" href="$helpers_8c.html#ad3e9fd83e20283e54a5adc9f5a9ea039" title=" " alt="" coords="147,107,248,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="83,98,133,107,132,112,82,104"/>
+<area shape="rect" id="Node000005" href="$dict__parser_8c.html#a5e0063cd44034d5e48a221f3f5890c3a" title=" " alt="" coords="130,157,266,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="67,106,131,143,144,149,141,154,128,148,65,111"/>
+<area shape="rect" id="Node000006" href="$helpers_8c.html#a41989b306da817556af871fb6d5b72ff" title=" " alt="" coords="314,107,435,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="246,154,311,135,312,141,248,159"/>
+<area shape="rect" id="Node000007" href="$process_8c.html#a7a9fe4f1210008b95e1b118945eb31ba" title=" " alt="" coords="488,157,557,184"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="266,168,473,168,473,173,266,173"/>
+<area shape="rect" id="Node000008" href="$helpers__val_8c.html#abff58decf4919821527339856b7d8960" title=" " alt="" coords="316,208,433,235"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="248,182,312,201,311,206,246,187"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="415,205,473,185,475,190,417,210"/>
+<area shape="rect" id="Node000009" href="$helpers__val_8c.html#ad695bedaccc198754dd6dd42fdc88e8e" title=" " alt="" coords="483,208,562,235"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="433,219,468,219,468,224,433,224"/>
+</map>
