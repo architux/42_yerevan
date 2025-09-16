@@ -4,6 +4,117 @@ function ebash() {
 	bash $1 | cat -e
 }
 
+function mainc_del() {
+	COLOR_GREEN="\033[32m"
+	COLOR_YELLOW="\033[33m"
+	COLOR_RED="\033[31m"
+	COLOR_BRIGHT_RED="\033[1;31m"
+	COLOR_RESET="\033[0m"
+
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: $0 <SRC_DIR> <DST_DIR>"
+		return 1
+	fi
+
+	SRC_DIR="$1"
+	DST_DIR="$2"
+	FILENAME="main.c"
+
+	find "$SRC_DIR" -mindepth 1 -maxdepth 1 -type d -name "ex*" -print0 | while IFS= read -r -d $'\0' subdir; do
+		REL_PATH="${subdir#$SRC_DIR/}"
+		SOURCE_FILE_PATH="$subdir/$FILENAME"
+		DEST_SUBDIR_PATH="$DST_DIR/$REL_PATH"
+
+		if [ -f "$DEST_SUBDIR_PATH/${FILENAME}" ]; then
+			rm "$DEST_SUBDIR_PATH/${FILENAME}"
+			echo -e "${SRC_DIR}/${REL_PATH} => ${COLOR_YELLOW}${FILENAME}${COLOR_RESET} ${COLOR_RED}[x] ${DEST_SUBDIR_PATH}/${FILENAME}${COLOR_RESET}"
+		fi
+	done
+}
+
+function mainc_sync() {
+	COLOR_GREEN="\033[32m"
+	COLOR_YELLOW="\033[33m"
+	COLOR_RED="\033[31m"
+	COLOR_BRIGHT_RED="\033[1;31m"
+	COLOR_RESET="\033[0m"
+
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: $0 <SRC_DIR> <DST_DIR>"
+		return 1
+	fi
+
+	SRC_DIR="$1"
+	DST_DIR="$2"
+	FILENAME="main.c"
+
+	find "$SRC_DIR" -mindepth 1 -maxdepth 1 -type d -name "ex*" -print0 | while IFS= read -r -d $'\0' subdir; do
+		REL_PATH="${subdir#$SRC_DIR/}"
+		SOURCE_FILE_PATH="$subdir/$FILENAME"
+		DEST_SUBDIR_PATH="$DST_DIR/$REL_PATH"
+
+		if [ -f "$SOURCE_FILE_PATH" ]; then
+			mkdir -p "$DEST_SUBDIR_PATH"
+
+			cp "$SOURCE_FILE_PATH" "$DEST_SUBDIR_PATH/"
+			echo -e "$SRC_DIR/$REL_PATH => ${COLOR_YELLOW}$FILENAME${COLOR_RESET} ${COLOR_GREEN}=> $DEST_SUBDIR_PATH${COLOR_RESET}"
+		fi
+	done
+}
+
+# function mainc_sync() {
+# 	if [ "$#" -ne 2 ]; then
+# 		echo "Usage: $0 <SRC_DIR> <DST_DIR>"
+# 		return 1
+# 	fi
+
+# 	SRC_DIR="$1"
+# 	DST_DIR="$2"
+# 	FILENAME="main.c"
+
+# 	TO_FORCE_COPY=""
+
+# 	find "$SRC_DIR" -type d -print0 | while IFS= read -r -d $'\0' subdir; do
+# 	# find "$SRC_DIR" -type f -name "$FILENAME" -exec dirname {} \; | sort -u | while read -r subdir; do
+# 		REL_PATH="${subdir#$SRC_DIR/}"
+# 		SRC_FILE_PATH="$subdir/$FILENAME"
+# 		DST_SUBDIR_PATH="$DST_DIR/$REL_PATH"
+
+# 		echo "SRC_FILE_PATH: $SRC_FILE_PATH"
+# 		if [ -f "$SRC_FILE_PATH" ]; then
+# 			mkdir -p "$DST_SUBDIR_PATH"
+
+# 			if [ -f "$DST_SUBDIR_PATH/$FILENAME" && -z$TO_FORCE_COPY ]; then
+# 				read -p "Files already exist, do you want to overwrite? (y/n)" user_input
+# 				TO_FORCE_COPY=$user_input
+
+# 				case "$TO_FORCE_COPY" in
+# 					[y])
+# 						TO_FORCE_COPY="y"
+# 						;;
+# 					[n])
+# 						return 1
+# 						;;
+# 					*)
+# 						echo "Invalid input, please enter 'y' or 'n'"
+# 						return 1
+# 						;;
+# 				esac
+# 			else
+# 				TO_FORCE_COPY="y"
+# 			fi
+
+# 			if [ $TO_FORCE_COPY -eq "y" ]; then
+# 				cp "$SRC_FILE_PATH" "$DST_SUBDIR_PATH/"
+# 				echo "$SRC_DIR/$REL_PATH => $FILENAME => $DST_DIR/$REL_PATH"
+# 			fi
+# 		else
+# 			echo "No similar subdirectories structure to sync into"
+# 			return 1
+# 		fi
+# 	done
+# }
+
 # Run norminette with proper block-based ordering and output colorization
 function norm_older() {
 	norminette -R CheckForbiddenSourceHeader | gawk '
