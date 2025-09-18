@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 23:40:54 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/16 20:45:44 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/17 19:11:56 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,20 @@
 
 int	ft_atoi(char *str);
 
-void	test(char *str)
+void	test(char *str, char *expected)
 {
-	printf("ft_atoi: %i\n", ft_atoi(str));
-	printf("   atoi: %i\n", atoi(str));
+	printf("ft_atoi: $%s$ $%s%i%s$ <=> $%s%s%s$\n",
+		str, COLOR_YELLOW, ft_atoi(str), COLOR_RESET,
+		COLOR_GREEN, expected, COLOR_RESET);
+	printf("   atoi: $%s$ $%s%i%s$ <=> $%s%s%s$\n",
+		str, COLOR_YELLOW, ft_atoi(str), COLOR_RESET,
+		COLOR_GREEN, expected, COLOR_RESET);
 	printf("\n");
 }
 
 int	main(void)
 {
-	test(" \n\v---+--+1234ab567");
-	test("+123z4ab567");
+	test(" ---+--+1234ab567", "-1234");
+	test("+123z4ab567", "123");
 	return (0);
 }

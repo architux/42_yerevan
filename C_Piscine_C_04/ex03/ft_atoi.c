@@ -6,7 +6,7 @@
 /*   By: mvasilev <mvasilev@student.42yerevan.am    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 21:35:35 by mvasilev          #+#    #+#             */
-/*   Updated: 2025/09/16 20:41:19 by mvasilev         ###   ########.fr       */
+/*   Updated: 2025/09/17 19:04:26 by mvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 #define DECIMAL_BASE 10
 
-int	is_whitespace(char c)
+int	ft_char_is_whitespace(char c)
 {
 	return (c == CHAR_SPACE
 		|| c == CHAR_FORM_FEED
@@ -35,12 +35,12 @@ int	is_whitespace(char c)
 		|| c == CHAR_VERTICAL_TAB);
 }
 
-int	is_sign(char c)
+int	ft_char_is_sign(char c)
 {
 	return (c == CHAR_PLUS || c == CHAR_MINUS);
 }
 
-int	is_number(char c)
+int	ft_char_is_number(char c)
 {
 	return (c >= CHAR_ZERO && c <= CHAR_NINE);
 }
@@ -54,15 +54,15 @@ int	ft_atoi(char *str)
 	number = 0;
 	sign = 1;
 	i = 0;
-	while (is_whitespace(str[i]))
+	while (ft_char_is_whitespace(str[i]))
 		i++;
-	while (is_sign(str[i]))
+	while (ft_char_is_sign(str[i]))
 	{
 		if (str[i] == CHAR_MINUS)
 			sign *= -1;
 		i++;
 	}
-	while (is_number(str[i]))
+	while (ft_char_is_number(str[i]))
 	{
 		number *= DECIMAL_BASE;
 		number += str[i] - CHAR_ZERO;
