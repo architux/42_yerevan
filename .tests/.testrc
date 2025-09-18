@@ -1,4 +1,5 @@
 alias cc42="cc -Wall -Wextra -Werror"
+alias mm="~/mini-moulinette/mini-moul.sh"
 
 function ebash() {
 	bash $1 | cat -e
